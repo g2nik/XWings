@@ -1,0 +1,393 @@
+<SpaceData>
+	<filiations>
+		<description>Republican</description>
+		<description>First Order</description>
+		<description>Neutral</description>
+		<description>Unknown</description>
+	</filiations>
+	<regions>
+		<Region>
+			<nameRegion>Deep Core</nameRegion>
+			<descriptionRegion>At the very heart of the galaxy, the Deep Core was a region that spanned seven thousand light years, and contained roughly 30 billion stars. Due to the gravitational pull of the vast number of stars, as well as a massive black hole at the center, local space-time was severely warped, making hyperspace travel difficult at best.It's dangerous to navigate, and few travellers venture this far coreward</descriptionRegion>
+			<mapRegion>DeepCore.jpg</mapRegion>
+		</Region>
+		<Region>
+			<nameRegion>Core Worlds</nameRegion>
+			<descriptionRegion>The Core Worlds was an ancient region bordering the outlying areas of the Deep Core, and included some of the most prestigious, well-developed, well-known, and heavily populated planets in the galaxy. The Galactic Republic and subsequently all galaxywide governments were born in the Core Worlds and spread out over the galaxy. During both the time of the Republic and Empire, Coruscant, a major core world, was the Galactic Capital.</descriptionRegion>
+			<mapRegion>Core.jpg</mapRegion>
+		</Region>
+		<Region>
+			<nameRegion>Colonies</nameRegion>
+			<descriptionRegion>The Colonies, so named because it was among the first areas outside the Core to be colonized, contained many of the galaxy's wealthiest worlds and prided itself on being the galaxy's economic engine. Worlds here were typically heavily populated, industrialized, and cultured, and the region was considered the meeting point of Core wealth and Rim raw materials. The Colonies, forming the tip of the Slice, came to include many of the galaxy's oldest manufacturing worlds, including Balmorra, Commenor and Neimoidia.</descriptionRegion>
+			<mapRegion>Colonies.jpg</mapRegion>
+		</Region>
+		<Region>
+			<nameRegion>Inner Rim</nameRegion>
+			<descriptionRegion>The Inner Rim was a region of the galaxy between the Colonies and the Expansion Region. It was originally just called "The Rim", as it was expected to be the farthest extent of the known galaxy for centuries.The region had minimal cultural influence and had few truly notable planets beyond the ecumenopolis of Denon and the medical worlds of Manaan and Thyferra. As the bridge between the Core and the Rim, the Inner Rim held great strategic value, and during both the Clone Wars and the Galactic Civil War, brutal battles were fought over the region</descriptionRegion>
+			<mapRegion>InnerRim.jpg</mapRegion>
+		</Region>
+		<Region>
+			<nameRegion>Expansion Region</nameRegion>
+			<descriptionRegion>The Expansion Region began as an experiment in corporate-controlled worlds, known as the Exploitation Region, with powerful corporations exploiting and profiting heavily from the planets for their raw materials, metals and ores. Inhabitants were oppressed while the corporations stripped entire stellar systems along the Corellian Run of all their resources. Expansion Region worlds continued to be producers of raw materials and ores. However, most natural resources were exhausted by the Imperial Period, with Gyndine, Bacrana and Cyrillia being among the few remaining viable ports </descriptionRegion>
+			<mapRegion>ExpansionRegion.jpg</mapRegion>
+		</Region>
+		<Region>
+			<nameRegion>Mid-Rim</nameRegion>
+			<descriptionRegion>With fewer natural resources (and therefore a smaller population) than many neighboring regions, the Mid Rim was a territory where residents worked hard for everything they had.  Consequently, the Mid Rim built up a successful economy based on low-cost manufacturing and agriculture.</descriptionRegion>
+			<mapRegion>MidRim.jpg</mapRegion>
+		</Region>
+		<Region>
+			<nameRegion>Outer Rim Territories</nameRegion>
+			<descriptionRegion>The Outer Rim Territories was the largest region of the galaxy, and the last widely settled expanse before Wild Space and the Unknown Regions. It was strewn with obscure worlds, and rugged, primitive frontier planets. Due to its distance from the Core, government control was historically the weakest in the Outer Rim Territories, and it was the traditional refuge for dissidents, pilgrims and freedom-seekers, but it was also beset by lawlessness, oppression and violence.  Worlds closest to the major super-hyperroutes tended to be the most civilized, but far from these trade links, they tended to be dominated by the Hutts.</descriptionRegion>
+			<mapRegion>OuterRim.jpg</mapRegion>
+		</Region>
+		<Region>
+			<nameRegion>Wild Space</nameRegion>
+			<descriptionRegion>Wild Space was the frontier of galactic society, separating the known parts of the galaxy from the Unknown Regions. It was not a formal label, but was applied to the unsettled galactic fringe and other parts of the galaxy with negligible colonization or development.  Wild Space differed from the Unknown Regions in that some of Wild Space had been explored, though not extensively, and the findings recorded in official logs. The worlds of Wild Space largely ignored the central government, and were generally peaceful, but many acted as criminal hideaways</descriptionRegion>
+			<mapRegion>swgalaxy.jpg</mapRegion>
+		</Region>
+		<Region>
+			<nameRegion>Unknown Regions</nameRegion>
+			<descriptionRegion>The term "Unknown Regions" referred to those areas that had not been directly surveyed by Republic or Imperial scouts. It was most commonly applied to the less-known parts of the galaxy's western disk, a quadrant stretching roughly between Bakura and the Imperial Remnant.</descriptionRegion>
+			<mapRegion>swgalaxy.jpg</mapRegion>
+		</Region>
+	</regions>
+	<planets>
+		<planet>
+			<name>Takodana</name>
+			<sector>Tashtor-Mid Rim</sector>
+			<filiation>Neutral</filiation>
+			<situation>
+				<long>715678</long>
+				<lat>678612</lat>
+			</situation>
+			<hyperspaceRoute>
+				<route>Corellian Run</route>
+				<route>Ison Trade Corridor</route>
+			</hyperspaceRoute>
+			<natives>Bravaisian</natives>
+		</planet>
+		<planet>
+			<name>Naboo</name>
+			<sector>Chommell-Mid Rim</sector>
+			<filiation>Republican</filiation>
+			<situation>
+				<long>5618934</long>
+				<lat>674569</lat>
+			</situation>
+			<hyperspaceRoute>
+				<route>Hydian Way</route>
+				<route>Corellian Trade Spine</route>
+			</hyperspaceRoute>
+			<natives>Gungan</natives>
+		</planet>
+		<planet>
+			<name>Dathomir</name>
+			<sector>Quelli-Outer Rim Territories</sector>
+			<filiation>First Order</filiation>
+			<situation>
+				<long>672311</long>
+				<lat>8982345</lat>
+			</situation>
+			<hyperspaceRoute>
+				<route>Hydian Way</route>
+				<route>Rimma Trade Route</route>
+			</hyperspaceRoute>
+			<natives>Dathomirians</natives>
+		</planet>
+		<planet>
+			<name>Kashyyyk</name>
+			<sector>Mytaranor-Mid Rim</sector>
+			<filiation>Republican</filiation>
+			<situation>
+				<long>71278533</long>
+				<lat>87125276</lat>
+			</situation>
+			<hyperspaceRoute>
+				<route>Randon Run</route>
+				<route>Perlemian Trade Route</route>
+			</hyperspaceRoute>
+			<natives>Wookiee</natives>
+		</planet>
+		<planet>
+			<name>Manaan</name>
+			<sector>Pyrshak-Inner Rim</sector>
+			<filiation>First Order</filiation>
+			<situation>
+				<long>95612312</long>
+				<lat>19389174</lat>
+			</situation>
+			<hyperspaceRoute>
+				<route>Rimma Trade Route</route>
+			</hyperspaceRoute>
+			<natives>Selkath</natives>
+		</planet>
+		<planet>
+			<name>Dantooine</name>
+			<sector>Raioballo-Outer Rim Territories</sector>
+			<filiation>Republican</filiation>
+			<situation>
+				<long>76352876</long>
+				<lat>29375203</lat>
+			</situation>
+			<hyperspaceRoute>
+				<route>Myto's Arrow</route>
+				<route>Ison Trade Corridor</route>
+			</hyperspaceRoute>
+			<natives>Humans</natives>
+		</planet>
+		<planet>
+			<name>Tatooine</name>
+			<sector>Arkanis-Outer Rim Territories</sector>
+			<filiation>Republican</filiation>
+			<situation>
+				<long>818277862</long>
+				<lat>58981176</lat>
+			</situation>
+			<hyperspaceRoute>
+				<route>Triellus Trade Route</route>
+				<route>Corellian Run</route>
+			</hyperspaceRoute>
+			<natives>Humans</natives>
+		</planet>
+		<planet>
+			<name>Mustafar</name>
+			<sector>Atravis-Outer Rim Territories</sector>
+			<filiation>First Order</filiation>
+			<situation>
+				<long>40983146</long>
+				<lat>78732098</lat>
+			</situation>
+			<hyperspaceRoute>
+				<route>Rimma Trade Route</route>
+			</hyperspaceRoute>
+			<natives>Mustafarian</natives>
+		</planet>
+		<planet>
+			<name>Endor</name>
+			<sector>Moddell-Outer Rim Territories</sector>
+			<filiation>Republican</filiation>
+			<situation>
+				<long>709991561</long>
+				<lat>85452198</lat>
+			</situation>
+			<hyperspaceRoute>
+				<route>Corellian Trade Spine</route>
+			</hyperspaceRoute>
+			<natives>Ewoks</natives>
+		</planet>
+		<planet>
+			<name>Coruscant</name>
+			<sector>Corusca-Core Worlds</sector>
+			<filiation>First Order</filiation>
+			<situation>
+				<long>767215765</long>
+				<lat>88657112</lat>
+			</situation>
+			<hyperspaceRoute>
+				<route>Corellian Run</route>
+				<route>Perlemian Trade Route</route>
+			</hyperspaceRoute>
+			<natives>Humans</natives>
+		</planet>
+		<planet>
+			<name>Dagobah</name>
+			<sector>Sluis-Outer Rim Territories</sector>
+			<filiation>Unknown</filiation>
+			<situation>
+				<long>699883621</long>
+				<lat>812124452</lat>
+			</situation>
+			<hyperspaceRoute>
+				<route>Rimma Trade Route</route>
+			</hyperspaceRoute>
+			<natives>Unknown</natives>
+		</planet>
+		<planet>
+			<name>Jakku</name>
+			<sector>Jakku-Inner Rim</sector>
+			<filiation>First Order</filiation>
+			<situation>
+				<long>787949989</long>
+				<lat>464891763</lat>
+			</situation>
+			<hyperspaceRoute>
+				<route>Randon Run</route>
+			</hyperspaceRoute>
+			<natives>Teedo</natives>
+		</planet>
+		<planet>
+			<name>Mandalore</name>
+			<sector>Mandalore-Outer Rim Territories</sector>
+			<filiation>First order</filiation>
+			<situation>
+				<long>351282377</long>
+				<lat>574836782</lat>
+			</situation>
+			<hyperspaceRoute>
+				<route>Hydian Way</route>
+			</hyperspaceRoute>
+			<natives>Humans</natives>
+		</planet>
+		<planet>
+			<name>Kuat</name>
+			<sector>Kuat-Core Worlds</sector>
+			<filiation>Republican</filiation>
+			<situation>
+				<long>976319946</long>
+				<lat>753477741</lat>
+			</situation>
+			<hyperspaceRoute>
+				<route>Hydian Way</route>
+			</hyperspaceRoute>
+			<natives>Kuati</natives>
+		</planet>
+		<planet>
+			<name>Corellia</name>
+			<sector>Corellia-Core Worlds</sector>
+			<filiation>First Order</filiation>
+			<situation>
+				<long>589486562</long>
+				<lat>154536239</lat>
+			</situation>
+			<hyperspaceRoute>
+				<route>Corellian Run</route>
+				<route>Corellian Trade Spine</route>
+			</hyperspaceRoute>
+			<natives>Humans</natives>	
+		</planet>
+		<planet>
+			<name>Hoth</name>
+			<sector>Anoat-Outer Rim Territories</sector>
+			<filiation>Republican</filiation>
+			<situation>
+				<long>732761421</long>
+				<lat>465613839</lat>
+			</situation>
+			<hyperspaceRoute>
+				<route>Corellian Run</route>
+				<route>Corellian Trade Spine</route>
+			</hyperspaceRoute>
+			<natives>Unknown</natives>
+		</planet>
+		<planet>
+			<name>Teth</name>
+			<sector>Baxel-Wild Space</sector>
+			<filiation>Neutral</filiation>
+			<situation>
+				<long>699868777</long>
+				<lat>496541472</lat>
+			</situation>
+			<hyperspaceRoute>
+				<route>Myto's Arrow</route>
+			</hyperspaceRoute>
+			<natives>Hutt</natives>
+		</planet>
+		<planet>
+			<name>D'Qar</name>
+			<sector>Ileenium-Outer Rim Territories</sector>
+			<filiation>Republican</filiation>
+			<situation>
+				<long>578361050</long>
+				<lat>248927671</lat>
+			</situation>
+			<hyperspaceRoute>
+				<route>Corellian Run</route>
+				<route>Hydian Way</route>
+			</hyperspaceRoute>
+			<natives>Humans</natives>
+		</planet>
+		<planet>
+			<name>Devaron</name>
+			<sector>Duluur-Colonies</sector>
+			<filiation>Republican</filiation>
+			<situation>
+				<long>154922839</long>
+				<lat>381532992</lat>
+			</situation>
+			<hyperspaceRoute>
+				<route>Corellian Trade Spine</route>
+			</hyperspaceRoute>
+			<natives>Devaronian</natives>
+		</planet>
+		<planet>
+			<name>Kessel</name>
+			<sector>Kessel-Outer Rim Territories</sector>
+			<filiation>First Order</filiation>
+			<situation>
+				<long>557142712</long>
+				<lat>763829251</lat>
+			</situation>
+			<hyperspaceRoute>
+				<route>Kessel Run</route>
+			</hyperspaceRoute>
+			<natives>Pyke</natives>
+		</planet>
+		<planet>
+			<name>Shili</name>
+					<sector>Shili-Expansion Region</sector>
+			<filiation>Republican</filiation>
+			<situation>
+				<long>637532259</long>
+				<lat>234712761</lat>
+			</situation>
+			<hyperspaceRoute>
+				<route>Triellus Trade Route</route>
+			</hyperspaceRoute>
+			<natives>Togruta</natives>
+		</planet>
+		<planet>
+			<name>Jelucan</name>
+			<sector>Jelucan-Outer Rim Territories</sector>
+			<filiation>First Order</filiation>
+			<situation>
+				<long>665129782</long>
+				<lat>483219217</lat>
+			</situation>
+			<hyperspaceRoute>
+				<route>Hydian Way</route>
+				<route>Rimma Trade Route</route>
+			</hyperspaceRoute>
+			<natives>Twi'lek</natives>
+		</planet>
+		<planet>
+			<name>Byss</name>
+			<sector>Beshqek-Deep Core</sector>
+			<filiation>First Order</filiation>
+			<situation>
+				<long>665129881</long>
+				<lat>683219250</lat>
+			</situation>
+			<hyperspaceRoute>
+				<route>Byss Run</route>
+			</hyperspaceRoute>
+			<natives>Humans</natives>
+		</planet>
+		<planet>
+			<name>Gyndine</name>
+			<sector>Gyndine-Expansion Region</sector>
+			<filiation>Neutral</filiation>
+			<situation>
+				<long>238129962</long>
+				<lat>688519252</lat>
+			</situation>
+			<hyperspaceRoute>
+				<route>Nanth'ri Route</route>
+			</hyperspaceRoute>
+			<natives>Humans</natives>
+		</planet>
+		<planet>
+			<name>Rakata Prime</name>
+			<sector>Rakata-Unknown Regions</sector>
+			<filiation>Unknown</filiation>
+			<situation>
+				<long>999872571</long>
+				<lat>599561879</lat>
+			</situation>
+			<hyperspaceRoute>
+				<route>Shiritoku Way</route>
+			</hyperspaceRoute>
+			<natives>Rakata</natives>
+		</planet>
+	</planets>
+</SpaceData>
