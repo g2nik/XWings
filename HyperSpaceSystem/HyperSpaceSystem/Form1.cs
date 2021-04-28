@@ -14,12 +14,19 @@ namespace HyperSpaceSystem
 {
     public partial class Form1 : Form
     {
-        XmlDocument xDoc = new XmlDocument();
+        Fucions fcn = new Fucions();
+         XmlDocument xDoc = new XmlDocument();
         string ruta = Application.StartupPath + "\\Recursos\\DataBank.xml";
+        int lat = 0, longi = 0;
+        Fucions.Position start = new Fucions.Position();
+        Fucions.Position destination = new Fucions.Position();
+        Fucions.mcmMcd posStart = new Fucions.mcmMcd();
+        Fucions.mcmMcd posEnd = new Fucions.mcmMcd();
+
+
         public Form1()
         {
             InitializeComponent();
-            getLocalitation();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -28,13 +35,7 @@ namespace HyperSpaceSystem
             cleanTextbox();
         }
 
-        private void getLocalitation()
-        {
-            XmlNodeList planetList = xDoc.GetElementsByTagName("planet");
-            string routeNode = "/SpaceData/planets/planet";
-            planetList = xDoc.SelectNodes(routeNode);
-
-        }
+        #region planetes
 
         private void getplanets()
         {
@@ -80,10 +81,26 @@ namespace HyperSpaceSystem
         private void btn_Search_Click(object sender, EventArgs e)
         {
             XmlNodeList planetList = xDoc.GetElementsByTagName("planet");
-            showDataPlanetSelected();
+            getLongLatOrigenPlanet();
+            showDataPlanetSelectedDest();
         }
 
-        private void showDataPlanetSelected()
+        private void getLongLatOrigenPlanet()
+        {
+            string selectedPlanet = cmb_position.SelectedItem.ToString(); ;
+            
+            XmlNodeList selectedPlanetChilds = xDoc.SelectNodes("/SpaceData/planets/planet[name=\"" + selectedPlanet + "\"]/*");
+            List<string> selectedPlanetData = new List<string>();
+            foreach (XmlNode node in selectedPlanetChilds)
+            {
+                selectedPlanetData.Add(node.InnerText);
+            }
+
+            lat =Int32.Parse( selectedPlanetChilds[3].SelectSingleNode("lat").InnerText);
+            longi = Int32.Parse(selectedPlanetChilds[3].SelectSingleNode("long").InnerText);
+        }
+
+        private void showDataPlanetSelectedDest()
         {
             string selectedPlanet = cmb_planet.SelectedItem.ToString(); ;
             lsb_routes.Visible = true;
@@ -121,7 +138,7 @@ namespace HyperSpaceSystem
             XmlNodeList routes = selectedPlanetChilds[4].ChildNodes;
 
             string minorRoute = "MINOR";
-            
+
             if (routes.Count > 1)
             {
                 lsb_routes.Items.Add("MAJOR");
@@ -178,7 +195,7 @@ namespace HyperSpaceSystem
             XmlNodeList regionsList = xDoc.GetElementsByTagName("nameRegion");
             foreach (XmlNode region in regionsList)
             {
-                cmb_planet.Items.Add(region.InnerText.Replace("-", " "));
+                cmb_planet.Items.Add(region.InnerText.Replace("-", ""));
             }
         }
         private void getPlanets()
@@ -188,6 +205,23 @@ namespace HyperSpaceSystem
             {
                 cmb_planet.Items.Add(planet.InnerText);
             }
+        }
+        #endregion
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            start = fcn.getVectorHyperSpace(lat, longi);
+            destination = fcn.getVectorHyperSpace(Int32.Parse(lbl_lat.Text),Int32.Parse( lbl_long.Text));
+           
+            posStart = fcn.getClassMcmMcd(start.lat, start.Long);
+            posEnd = fcn.getClassMcmMcd(destination.lat, destination.Long);
+
+            MessageBox.Show(posStart.mcd+" "+ posStart.mcm);
+            MessageBox.Show(posEnd.mcd + " " + posEnd.mcm);
+
+
+            //crear lista para operaciones en clase funcion devolver lista
+            //con operaciones realizadas y si es amyor a 300 lista vacia
         }
     }
 }
