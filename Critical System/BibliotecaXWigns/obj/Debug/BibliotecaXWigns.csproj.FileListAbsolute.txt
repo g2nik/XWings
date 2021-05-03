@@ -1,0 +1,6 @@
+C:\Users\Mario\Desktop\Github\G2Team\XWings\Critical System\BibliotecaXWigns\bin\Debug\BibliotecaXWigns.dll
+C:\Users\Mario\Desktop\Github\G2Team\XWings\Critical System\BibliotecaXWigns\bin\Debug\BibliotecaXWigns.pdb
+C:\Users\Mario\Desktop\Github\G2Team\XWings\Critical System\BibliotecaXWigns\obj\Debug\BibliotecaXWigns.csprojAssemblyReference.cache
+C:\Users\Mario\Desktop\Github\G2Team\XWings\Critical System\BibliotecaXWigns\obj\Debug\BibliotecaXWigns.csproj.CoreCompileInputs.cache
+C:\Users\Mario\Desktop\Github\G2Team\XWings\Critical System\BibliotecaXWigns\obj\Debug\BibliotecaXWigns.dll
+C:\Users\Mario\Desktop\Github\G2Team\XWings\Critical System\BibliotecaXWigns\obj\Debug\BibliotecaXWigns.pdb
