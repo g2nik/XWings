@@ -1,4 +1,119 @@
-<SpaceData>
+<hyperSpacedata>
+	<hyperspaceRoutes>
+		<Route>
+			<type>Major hyperspace route</type>
+			<nameRoute>Corellian Run</nameRoute>
+			<start>Coruscant</start>
+			<end>Ryloth</end>
+		</Route>
+		<Route>
+			<type>Major hyperspace route</type>
+			<nameRoute>Perlemian Trade Route</nameRoute>
+			<start>Coruscant</start>
+			<end> Quermia</end>
+		</Route>
+		<Route>
+			<type>Major hyperspace route</type>
+			<nameRoute>Corellian Trade Spine</nameRoute>
+			<start>Corellia</start>
+			<end>Terminus</end>
+		</Route>
+		<Route>
+			<type>Major hyperspace route</type>
+			<nameRoute>Hydian Way</nameRoute>
+			<start>Bonadan</start>
+			<end>Imynusoph</end>
+		</Route>
+		<Route>
+			<type>Major hyperspace route</type>
+			<nameRoute>Rimma Trade Route</nameRoute>
+			<start>Abregado-rae</start>
+			<end>Karideph</end>
+		</Route>
+		<Route>
+			<type>Minor hyperspace route</type>
+			<nameRoute>Ison Trade Corridor</nameRoute>
+			<start>Indellian</start>
+			<end>Mataou</end>
+		</Route>
+		<Route>
+			<type>Minor hyperspace route</type>
+			<nameRoute>Randon Run</nameRoute>
+			<start>Lantillies</start>
+			<end>Randon</end>
+		</Route>
+		<Route>
+			<type>Minor hyperspace route</type>
+			<nameRoute>Myto's Arrow</nameRoute>
+			<start>Dantooine</start>
+			<end>Jaemus</end>
+		</Route>
+		<Route>
+			<type>Minor hyperspace route</type>
+			<nameRoute>Triellus Trade Route</nameRoute>
+			<start>Centares</start>
+			<end>Enarc</end>
+		</Route>
+		<Route>
+			<type>Minor hyperspace route</type>
+			<nameRoute>Kessel Run</nameRoute>
+			<start>Formos</start>
+			<end>Kessel</end>
+		</Route>
+		<Route>
+			<type>Minor hyperspace route</type>
+			<nameRoute>Nanth'ri Route</nameRoute>
+			<start>Exodeen</start>
+			<end>Nanth'ri</end>
+		</Route>
+		<Route>
+			<type>Minor hyperspace route</type>
+			<nameRoute>Byss Run</nameRoute>
+			<start>Empress Teta</start>
+			<end>Byss</end>
+		</Route>
+		<Route>
+			<type>Minor hyperspace route</type>
+			<nameRoute>Endor Run</nameRoute>
+			<start>Endor</start>
+			<end>Kinyen</end>
+		</Route>
+		<Route>
+			<type>Minor hyperspace route</type>
+			<nameRoute>Shiritoku Way</nameRoute>
+			<start>Endor</start>
+			<end>Rakata</end>
+		</Route>
+		<Route>
+			<type>Minor hyperspace route</type>
+			<nameRoute>Enarc Run</nameRoute>
+			<start>Endor</start>
+			<end>Rakata</end>
+		</Route>
+		<Route>
+			<type>Minor hyperspace route</type>
+			<nameRoute>Manda Merchant Route</nameRoute>
+			<start>Molavar</start>
+			<end>Randon</end>
+		</Route>
+		<definedRoutes>
+			<defineRoute>
+				<OrDes>Naboo-Tatooine</OrDes>
+				<selectedRoute>Triellus Trade Route</selectedRoute>
+				<map>Triellus.png</map>
+			</defineRoute>
+			<defineRoute>
+				<OrDes>Naboo-Endor</OrDes>
+				<selectedRoute>Enarc Run-Rimma Trade Route-Corellian Trade Spine-Endor Run</selectedRoute>
+				<map>Triellus.png</map>
+			</defineRoute>
+			<defineRoute>
+				<OrDes>Tatooine-Kashyyyk</OrDes>
+				<selectedRoute>Manda Merchant Route-Randon Run</selectedRoute>
+				<map>Kashyyyk.png</map>
+			</defineRoute>
+		</definedRoutes>
+	</hyperspaceRoutes>
 	<filiations>
 		<description>Republican</description>
 		<description>First Order</description>
@@ -60,12 +175,14 @@
 			<situation>
 				<long>715678</long>
 				<lat>678612</lat>
+				<parsecs>16784YY</parsecs>
 			</situation>
 			<hyperspaceRoute>
 				<route>Corellian Run</route>
 				<route>Ison Trade Corridor</route>
 			</hyperspaceRoute>
 			<natives>Bravaisian</natives>
+			<landingDefault></landingDefault>
 		</planet>
 		<planet>
 			<name>Naboo</name>
@@ -74,12 +191,14 @@
 			<situation>
 				<long>5618934</long>
 				<lat>674569</lat>
+				<parsecs>983461YM</parsecs>
 			</situation>
 			<hyperspaceRoute>
 				<route>Hydian Way</route>
 				<route>Corellian Trade Spine</route>
 			</hyperspaceRoute>
 			<natives>Gungan</natives>
+			<landingDefault></landingDefault>
 		</planet>
 		<planet>
 			<name>Dathomir</name>
@@ -88,12 +207,14 @@
 			<situation>
 				<long>672311</long>
 				<lat>8982345</lat>
+				<parsecs>56423MY</parsecs>
 			</situation>
 			<hyperspaceRoute>
 				<route>Hydian Way</route>
 				<route>Rimma Trade Route</route>
 			</hyperspaceRoute>
 			<natives>Dathomirians</natives>
+			<landingDefault></landingDefault>
 		</planet>
 		<planet>
 			<name>Kashyyyk</name>
@@ -102,12 +223,14 @@
 			<situation>
 				<long>71278533</long>
 				<lat>87125276</lat>
+				<parsecs>75612MY</parsecs>
 			</situation>
 			<hyperspaceRoute>
 				<route>Randon Run</route>
 				<route>Perlemian Trade Route</route>
 			</hyperspaceRoute>
 			<natives>Wookiee</natives>
+			<landingDefault></landingDefault>
 		</planet>
 		<planet>
 			<name>Manaan</name>
@@ -116,25 +239,29 @@
 			<situation>
 				<long>95612312</long>
 				<lat>19389174</lat>
+				<parsecs>91864YY</parsecs>
 			</situation>
 			<hyperspaceRoute>
 				<route>Rimma Trade Route</route>
 			</hyperspaceRoute>
 			<natives>Selkath</natives>
+			<landingDefault></landingDefault>
 		</planet>
 		<planet>
 			<name>Dantooine</name>
-			<sector>Raioballo-Outer Rim Territories</sector>
+			<sector>Raioballo-Outer Rim Territories[</sector>
 			<filiation>Republican</filiation>
 			<situation>
 				<long>76352876</long>
 				<lat>29375203</lat>
+				<parsecs>99855NFV</parsecs>
 			</situation>
 			<hyperspaceRoute>
 				<route>Myto's Arrow</route>
 				<route>Ison Trade Corridor</route>
 			</hyperspaceRoute>
 			<natives>Humans</natives>
+			<landingDefault></landingDefault>
 		</planet>
 		<planet>
 			<name>Tatooine</name>
@@ -143,12 +270,14 @@
 			<situation>
 				<long>818277862</long>
 				<lat>58981176</lat>
+				<parsecs>84745YY</parsecs>
 			</situation>
 			<hyperspaceRoute>
 				<route>Triellus Trade Route</route>
 				<route>Corellian Run</route>
 			</hyperspaceRoute>
 			<natives>Humans</natives>
+			<landingDefault></landingDefault>
 		</planet>
 		<planet>
 			<name>Mustafar</name>
@@ -157,11 +286,13 @@
 			<situation>
 				<long>40983146</long>
 				<lat>78732098</lat>
+				<parsecs>88737YY</parsecs>
 			</situation>
 			<hyperspaceRoute>
 				<route>Rimma Trade Route</route>
 			</hyperspaceRoute>
 			<natives>Mustafarian</natives>
+			<landingDefault></landingDefault>
 		</planet>
 		<planet>
 			<name>Endor</name>
@@ -170,11 +301,13 @@
 			<situation>
 				<long>709991561</long>
 				<lat>85452198</lat>
+				<parsecs>17382AV</parsecs>
 			</situation>
 			<hyperspaceRoute>
 				<route>Corellian Trade Spine</route>
 			</hyperspaceRoute>
 			<natives>Ewoks</natives>
+			<landingDefault></landingDefault>
 		</planet>
 		<planet>
 			<name>Coruscant</name>
@@ -183,12 +316,14 @@
 			<situation>
 				<long>767215765</long>
 				<lat>88657112</lat>
+				<parsecs>94746MM</parsecs>
 			</situation>
 			<hyperspaceRoute>
 				<route>Corellian Run</route>
 				<route>Perlemian Trade Route</route>
 			</hyperspaceRoute>
 			<natives>Humans</natives>
+			<landingDefault></landingDefault>
 		</planet>
 		<planet>
 			<name>Dagobah</name>
@@ -197,11 +332,13 @@
 			<situation>
 				<long>699883621</long>
 				<lat>812124452</lat>
+				<parsecs>17623YY</parsecs>
 			</situation>
 			<hyperspaceRoute>
 				<route>Rimma Trade Route</route>
 			</hyperspaceRoute>
 			<natives>Unknown</natives>
+			<landingDefault></landingDefault>
 		</planet>
 		<planet>
 			<name>Jakku</name>
@@ -210,11 +347,13 @@
 			<situation>
 				<long>787949989</long>
 				<lat>464891763</lat>
+				<parsecs>85857BNW</parsecs>
 			</situation>
 			<hyperspaceRoute>
 				<route>Randon Run</route>
 			</hyperspaceRoute>
 			<natives>Teedo</natives>
+			<landingDefault></landingDefault>
 		</planet>
 		<planet>
 			<name>Mandalore</name>
@@ -223,11 +362,13 @@
 			<situation>
 				<long>351282377</long>
 				<lat>574836782</lat>
+				<parsecs>78432YY</parsecs>
 			</situation>
 			<hyperspaceRoute>
 				<route>Hydian Way</route>
 			</hyperspaceRoute>
 			<natives>Humans</natives>
+			<landingDefault></landingDefault>
 		</planet>
 		<planet>
 			<name>Kuat</name>
@@ -236,11 +377,13 @@
 			<situation>
 				<long>976319946</long>
 				<lat>753477741</lat>
+				<parsecs>64534YM</parsecs>
 			</situation>
 			<hyperspaceRoute>
 				<route>Hydian Way</route>
 			</hyperspaceRoute>
 			<natives>Kuati</natives>
+			<landingDefault></landingDefault>
 		</planet>
 		<planet>
 			<name>Corellia</name>
@@ -249,12 +392,14 @@
 			<situation>
 				<long>589486562</long>
 				<lat>154536239</lat>
+				<parsecs>43526MM</parsecs>
 			</situation>
 			<hyperspaceRoute>
 				<route>Corellian Run</route>
 				<route>Corellian Trade Spine</route>
 			</hyperspaceRoute>
-			<natives>Humans</natives>	
+			<natives>Humans</natives>
+			<landingDefault></landingDefault>
 		</planet>
 		<planet>
 			<name>Hoth</name>
@@ -263,12 +408,14 @@
 			<situation>
 				<long>732761421</long>
 				<lat>465613839</lat>
+				<parsecs>78365YY</parsecs>
 			</situation>
 			<hyperspaceRoute>
 				<route>Corellian Run</route>
 				<route>Corellian Trade Spine</route>
 			</hyperspaceRoute>
 			<natives>Unknown</natives>
+			<landingDefault></landingDefault>
 		</planet>
 		<planet>
 			<name>Teth</name>
@@ -277,11 +424,13 @@
 			<situation>
 				<long>699868777</long>
 				<lat>496541472</lat>
+				<parsecs>64998QFN</parsecs>
 			</situation>
 			<hyperspaceRoute>
 				<route>Myto's Arrow</route>
 			</hyperspaceRoute>
 			<natives>Hutt</natives>
+			<landingDefault></landingDefault>
 		</planet>
 		<planet>
 			<name>D'Qar</name>
@@ -290,12 +439,14 @@
 			<situation>
 				<long>578361050</long>
 				<lat>248927671</lat>
+				<parsecs>26731YM</parsecs>
 			</situation>
 			<hyperspaceRoute>
 				<route>Corellian Run</route>
 				<route>Hydian Way</route>
 			</hyperspaceRoute>
 			<natives>Humans</natives>
+			<landingDefault></landingDefault>
 		</planet>
 		<planet>
 			<name>Devaron</name>
@@ -304,11 +455,13 @@
 			<situation>
 				<long>154922839</long>
 				<lat>381532992</lat>
+				<parsecs>23865YY</parsecs>
 			</situation>
 			<hyperspaceRoute>
 				<route>Corellian Trade Spine</route>
 			</hyperspaceRoute>
 			<natives>Devaronian</natives>
+			<landingDefault></landingDefault>
 		</planet>
 		<planet>
 			<name>Kessel</name>
@@ -317,11 +470,13 @@
 			<situation>
 				<long>557142712</long>
 				<lat>763829251</lat>
+				<parsecs>84536ERH</parsecs>
 			</situation>
 			<hyperspaceRoute>
 				<route>Kessel Run</route>
 			</hyperspaceRoute>
 			<natives>Pyke</natives>
+			<landingDefault></landingDefault>
 		</planet>
 		<planet>
 			<name>Shili</name>
@@ -330,11 +485,13 @@
 			<situation>
 				<long>637532259</long>
 				<lat>234712761</lat>
+				<parsecs>83420YY</parsecs>
 			</situation>
 			<hyperspaceRoute>
 				<route>Triellus Trade Route</route>
 			</hyperspaceRoute>
 			<natives>Togruta</natives>
+			<landingDefault></landingDefault>
 		</planet>
 		<planet>
 			<name>Jelucan</name>
@@ -343,12 +500,14 @@
 			<situation>
 				<long>665129782</long>
 				<lat>483219217</lat>
+				<parsecs>68123YY</parsecs>
 			</situation>
 			<hyperspaceRoute>
 				<route>Hydian Way</route>
 				<route>Rimma Trade Route</route>
 			</hyperspaceRoute>
 			<natives>Twi'lek</natives>
+			<landingDefault></landingDefault>
 		</planet>
 		<planet>
 			<name>Byss</name>
@@ -357,11 +516,13 @@
 			<situation>
 				<long>665129881</long>
 				<lat>683219250</lat>
+				<parsecs>68123YY</parsecs>
 			</situation>
 			<hyperspaceRoute>
 				<route>Byss Run</route>
 			</hyperspaceRoute>
 			<natives>Humans</natives>
+			<landingDefault></landingDefault>
 		</planet>
 		<planet>
 			<name>Gyndine</name>
@@ -370,11 +531,13 @@
 			<situation>
 				<long>238129962</long>
 				<lat>688519252</lat>
+				<parsecs>85382YM</parsecs>
 			</situation>
 			<hyperspaceRoute>
 				<route>Nanth'ri Route</route>
 			</hyperspaceRoute>
 			<natives>Humans</natives>
+			<landingDefault></landingDefault>
 		</planet>
 		<planet>
 			<name>Rakata Prime</name>
@@ -383,11 +546,13 @@
 			<situation>
 				<long>999872571</long>
 				<lat>599561879</lat>
+				<parsecs>97444YM</parsecs>
 			</situation>
 			<hyperspaceRoute>
 				<route>Shiritoku Way</route>
 			</hyperspaceRoute>
 			<natives>Rakata</natives>
+			<landingDefault></landingDefault>
 		</planet>
 	</planets>
-</SpaceData>
+</hyperSpacedata>
