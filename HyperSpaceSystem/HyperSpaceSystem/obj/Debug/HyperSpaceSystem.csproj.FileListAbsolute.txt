@@ -11,3 +11,13 @@ C:\Users\Mario\Desktop\Github\G2Team\XWings\HyperSpaceSystem\HyperSpaceSystem\Ej
 C:\Users\Mario\Desktop\Github\G2Team\XWings\HyperSpaceSystem\HyperSpaceSystem\Ejecutables\HyperSpaceSystem.exe
 C:\Users\Mario\Desktop\Github\G2Team\XWings\HyperSpaceSystem\HyperSpaceSystem\Ejecutables\HyperSpaceSystem.pdb
 C:\Users\Mario\Desktop\Github\G2Team\XWings\HyperSpaceSystem\HyperSpaceSystem\obj\Debug\HyperSpaceSystem.csprojAssemblyReference.cache
+C:\Users\Snake\Documents\GitHub\XWings\HyperSpaceSystem\HyperSpaceSystem\Ejecutables\HyperSpaceSystem.exe.config
+C:\Users\Snake\Documents\GitHub\XWings\HyperSpaceSystem\HyperSpaceSystem\Ejecutables\HyperSpaceSystem.exe
+C:\Users\Snake\Documents\GitHub\XWings\HyperSpaceSystem\HyperSpaceSystem\Ejecutables\HyperSpaceSystem.pdb
+C:\Users\Snake\Documents\GitHub\XWings\HyperSpaceSystem\HyperSpaceSystem\obj\Debug\HyperSpaceSystem.csprojAssemblyReference.cache
+C:\Users\Snake\Documents\GitHub\XWings\HyperSpaceSystem\HyperSpaceSystem\obj\Debug\HyperSpaceSystem.Form1.resources
+C:\Users\Snake\Documents\GitHub\XWings\HyperSpaceSystem\HyperSpaceSystem\obj\Debug\HyperSpaceSystem.Properties.Resources.resources
+C:\Users\Snake\Documents\GitHub\XWings\HyperSpaceSystem\HyperSpaceSystem\obj\Debug\HyperSpaceSystem.csproj.GenerateResource.cache
+C:\Users\Snake\Documents\GitHub\XWings\HyperSpaceSystem\HyperSpaceSystem\obj\Debug\HyperSpaceSystem.csproj.CoreCompileInputs.cache
+C:\Users\Snake\Documents\GitHub\XWings\HyperSpaceSystem\HyperSpaceSystem\obj\Debug\HyperSpaceSystem.exe
+C:\Users\Snake\Documents\GitHub\XWings\HyperSpaceSystem\HyperSpaceSystem\obj\Debug\HyperSpaceSystem.pdb

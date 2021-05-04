@@ -45,7 +45,8 @@ namespace Critical_System
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(85, 32);
+            this.label1.ForeColor = System.Drawing.Color.PaleGreen;
+            this.label1.Location = new System.Drawing.Point(10, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 13);
             this.label1.TabIndex = 0;
@@ -54,7 +55,8 @@ namespace Critical_System
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(85, 54);
+            this.label2.ForeColor = System.Drawing.Color.PaleGreen;
+            this.label2.Location = new System.Drawing.Point(10, 62);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 13);
             this.label2.TabIndex = 1;
@@ -63,7 +65,8 @@ namespace Critical_System
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(85, 83);
+            this.label3.ForeColor = System.Drawing.Color.PaleGreen;
+            this.label3.Location = new System.Drawing.Point(9, 91);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 13);
             this.label3.TabIndex = 2;
@@ -72,7 +75,8 @@ namespace Critical_System
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(85, 108);
+            this.label4.ForeColor = System.Drawing.Color.PaleGreen;
+            this.label4.Location = new System.Drawing.Point(10, 120);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 13);
             this.label4.TabIndex = 3;
@@ -81,7 +85,8 @@ namespace Critical_System
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(85, 134);
+            this.label5.ForeColor = System.Drawing.Color.PaleGreen;
+            this.label5.Location = new System.Drawing.Point(12, 149);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(40, 13);
             this.label5.TabIndex = 4;
@@ -89,7 +94,7 @@ namespace Critical_System
             // 
             // pgb_armament
             // 
-            this.pgb_armament.Location = new System.Drawing.Point(162, 22);
+            this.pgb_armament.Location = new System.Drawing.Point(87, 23);
             this.pgb_armament.Maximum = 60;
             this.pgb_armament.Name = "pgb_armament";
             this.pgb_armament.Size = new System.Drawing.Size(432, 23);
@@ -97,7 +102,7 @@ namespace Critical_System
             // 
             // pgb_sensor
             // 
-            this.pgb_sensor.Location = new System.Drawing.Point(162, 134);
+            this.pgb_sensor.Location = new System.Drawing.Point(87, 139);
             this.pgb_sensor.Maximum = 60;
             this.pgb_sensor.Name = "pgb_sensor";
             this.pgb_sensor.Size = new System.Drawing.Size(432, 23);
@@ -105,7 +110,7 @@ namespace Critical_System
             // 
             // pgb_motor
             // 
-            this.pgb_motor.Location = new System.Drawing.Point(162, 47);
+            this.pgb_motor.Location = new System.Drawing.Point(87, 52);
             this.pgb_motor.Maximum = 60;
             this.pgb_motor.Name = "pgb_motor";
             this.pgb_motor.Size = new System.Drawing.Size(432, 23);
@@ -113,7 +118,7 @@ namespace Critical_System
             // 
             // pgb_generador
             // 
-            this.pgb_generador.Location = new System.Drawing.Point(162, 76);
+            this.pgb_generador.Location = new System.Drawing.Point(87, 81);
             this.pgb_generador.Maximum = 60;
             this.pgb_generador.Name = "pgb_generador";
             this.pgb_generador.Size = new System.Drawing.Size(432, 23);
@@ -121,7 +126,7 @@ namespace Critical_System
             // 
             // pgb_refector
             // 
-            this.pgb_refector.Location = new System.Drawing.Point(162, 105);
+            this.pgb_refector.Location = new System.Drawing.Point(87, 110);
             this.pgb_refector.Maximum = 60;
             this.pgb_refector.Name = "pgb_refector";
             this.pgb_refector.Size = new System.Drawing.Size(432, 23);
@@ -129,11 +134,13 @@ namespace Critical_System
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(298, 201);
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.PaleGreen;
+            this.button1.Location = new System.Drawing.Point(12, 202);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(507, 72);
             this.button1.TabIndex = 10;
-            this.button1.Text = "button1";
+            this.button1.Text = "Start";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -141,7 +148,8 @@ namespace Critical_System
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
+            this.ClientSize = new System.Drawing.Size(530, 301);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pgb_refector);
             this.Controls.Add(this.pgb_generador);
