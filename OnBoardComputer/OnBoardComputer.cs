@@ -150,7 +150,7 @@ namespace OnBoardComputer
 
                     else if (index == 2)
                     {
-                        pictureBox.Visible = false;
+                        pictureBox.Visible = true;
                         pnlSlider.Visible = false;
                         mostrarEtiquetas(false, 1, 5);
                         mostrarEtiquetas(true, 1, 3);
@@ -167,6 +167,19 @@ namespace OnBoardComputer
                         lblValue3.Text = datosRuta.ElementAt(2).Value;
                         lblTitle4.Text = "Fin";
                         lblValue4.Text = datosRuta.ElementAt(3).Value;
+
+                        string[] palabrasElemento = nombreElemento.Split(' ');
+                        bool imagenExiste = Directory.EnumerateFiles(@"planets/").Any(f => f.IndexOf(palabrasElemento[0], StringComparison.OrdinalIgnoreCase) > 0);
+
+                        if (imagenExiste)
+                        {
+                            string[] files = Directory.GetFiles(@"planets/", $"{palabrasElemento[0]}*.*");
+                            pictureBox.Image = Image.FromFile(files[0]);
+                        }
+                        else
+                        {
+                            pictureBox.Image = Image.FromFile("planets/na.jpg");
+                        }
                     }
 
                     else if (index == 3)
