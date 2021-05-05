@@ -8,7 +8,6 @@ C:\Users\Miguel\Desktop\GitHub\XWings\HyperSpaceSystem\Graella\obj\Debug\Graella
 C:\Users\Miguel\Desktop\GitHub\XWings\HyperSpaceSystem\Graella\obj\Debug\Graella.Properties.Resources.resources
 C:\Users\Mario\Desktop\Github\G2Team\XWings\HyperSpaceSystem\Graella\bin\Debug\Graella.dll
 C:\Users\Mario\Desktop\Github\G2Team\XWings\HyperSpaceSystem\Graella\bin\Debug\Graella.pdb
-C:\Users\Mario\Desktop\Github\G2Team\XWings\HyperSpaceSystem\Graella\obj\Debug\Graella.csprojAssemblyReference.cache
 C:\Users\Mario\Desktop\Github\G2Team\XWings\HyperSpaceSystem\Graella\obj\Debug\Graella.PlanetTable.resources
 C:\Users\Mario\Desktop\Github\G2Team\XWings\HyperSpaceSystem\Graella\obj\Debug\Graella.Properties.Resources.resources
 C:\Users\Mario\Desktop\Github\G2Team\XWings\HyperSpaceSystem\Graella\obj\Debug\Graella.csproj.GenerateResource.cache

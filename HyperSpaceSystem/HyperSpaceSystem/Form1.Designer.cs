@@ -48,17 +48,17 @@ namespace HyperSpaceSystem
             this.cmb_planet = new System.Windows.Forms.ComboBox();
             this.cmb_category = new System.Windows.Forms.ComboBox();
             this.cmb_position = new System.Windows.Forms.ComboBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_save = new System.Windows.Forms.Button();
+            this.Pict_planetRoute = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lbl_orDes = new System.Windows.Forms.Label();
+            this.lbl_Route = new System.Windows.Forms.Label();
+            this.lbl_Image = new System.Windows.Forms.Label();
             this.lbl_Map_text = new System.Windows.Forms.Label();
             this.lbl_SelectedRoute_text = new System.Windows.Forms.Label();
             this.lbl_Order_Text = new System.Windows.Forms.Label();
-            this.lbl_Image = new System.Windows.Forms.Label();
-            this.lbl_Route = new System.Windows.Forms.Label();
-            this.lbl_orDes = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.Pict_planetRoute = new System.Windows.Forms.PictureBox();
-            this.btn_save = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pict_planetRoute)).BeginInit();
@@ -234,15 +234,6 @@ namespace HyperSpaceSystem
             this.cmb_position.Size = new System.Drawing.Size(121, 21);
             this.cmb_position.TabIndex = 36;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Location = new System.Drawing.Point(19, 103);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(765, 428);
-            this.panel1.TabIndex = 38;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.btn_save);
@@ -258,6 +249,62 @@ namespace HyperSpaceSystem
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(394, 301);
             this.panel2.TabIndex = 39;
+            // 
+            // btn_save
+            // 
+            this.btn_save.Location = new System.Drawing.Point(106, 238);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(165, 23);
+            this.btn_save.TabIndex = 41;
+            this.btn_save.Text = "Save";
+            this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
+            // 
+            // Pict_planetRoute
+            // 
+            this.Pict_planetRoute.Location = new System.Drawing.Point(229, 17);
+            this.Pict_planetRoute.Name = "Pict_planetRoute";
+            this.Pict_planetRoute.Size = new System.Drawing.Size(162, 113);
+            this.Pict_planetRoute.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Pict_planetRoute.TabIndex = 40;
+            this.Pict_planetRoute.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(296, 179);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Select Image";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // lbl_orDes
+            // 
+            this.lbl_orDes.AutoSize = true;
+            this.lbl_orDes.Location = new System.Drawing.Point(141, 129);
+            this.lbl_orDes.Name = "lbl_orDes";
+            this.lbl_orDes.Size = new System.Drawing.Size(35, 13);
+            this.lbl_orDes.TabIndex = 5;
+            this.lbl_orDes.Text = "Ordes";
+            // 
+            // lbl_Route
+            // 
+            this.lbl_Route.AutoSize = true;
+            this.lbl_Route.Location = new System.Drawing.Point(141, 156);
+            this.lbl_Route.Name = "lbl_Route";
+            this.lbl_Route.Size = new System.Drawing.Size(36, 13);
+            this.lbl_Route.TabIndex = 4;
+            this.lbl_Route.Text = "Route";
+            // 
+            // lbl_Image
+            // 
+            this.lbl_Image.AutoSize = true;
+            this.lbl_Image.Location = new System.Drawing.Point(141, 184);
+            this.lbl_Image.Name = "lbl_Image";
+            this.lbl_Image.Size = new System.Drawing.Size(69, 13);
+            this.lbl_Image.TabIndex = 3;
+            this.lbl_Image.Text = "Select Image";
             // 
             // lbl_Map_text
             // 
@@ -286,61 +333,14 @@ namespace HyperSpaceSystem
             this.lbl_Order_Text.TabIndex = 0;
             this.lbl_Order_Text.Text = "Order";
             // 
-            // lbl_Image
+            // panel1
             // 
-            this.lbl_Image.AutoSize = true;
-            this.lbl_Image.Location = new System.Drawing.Point(141, 184);
-            this.lbl_Image.Name = "lbl_Image";
-            this.lbl_Image.Size = new System.Drawing.Size(69, 13);
-            this.lbl_Image.TabIndex = 3;
-            this.lbl_Image.Text = "Select Image";
-            // 
-            // lbl_Route
-            // 
-            this.lbl_Route.AutoSize = true;
-            this.lbl_Route.Location = new System.Drawing.Point(141, 156);
-            this.lbl_Route.Name = "lbl_Route";
-            this.lbl_Route.Size = new System.Drawing.Size(36, 13);
-            this.lbl_Route.TabIndex = 4;
-            this.lbl_Route.Text = "Route";
-            // 
-            // lbl_orDes
-            // 
-            this.lbl_orDes.AutoSize = true;
-            this.lbl_orDes.Location = new System.Drawing.Point(141, 129);
-            this.lbl_orDes.Name = "lbl_orDes";
-            this.lbl_orDes.Size = new System.Drawing.Size(35, 13);
-            this.lbl_orDes.TabIndex = 5;
-            this.lbl_orDes.Text = "Ordes";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(296, 179);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Select Image";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // Pict_planetRoute
-            // 
-            this.Pict_planetRoute.Location = new System.Drawing.Point(229, 17);
-            this.Pict_planetRoute.Name = "Pict_planetRoute";
-            this.Pict_planetRoute.Size = new System.Drawing.Size(162, 113);
-            this.Pict_planetRoute.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Pict_planetRoute.TabIndex = 40;
-            this.Pict_planetRoute.TabStop = false;
-            // 
-            // btn_save
-            // 
-            this.btn_save.Location = new System.Drawing.Point(106, 238);
-            this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(165, 23);
-            this.btn_save.TabIndex = 41;
-            this.btn_save.Text = "Save";
-            this.btn_save.UseVisualStyleBackColor = true;
-            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Location = new System.Drawing.Point(11, 100);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(765, 428);
+            this.panel1.TabIndex = 38;
             // 
             // Form1
             // 
@@ -401,7 +401,6 @@ namespace HyperSpaceSystem
         private System.Windows.Forms.ComboBox cmb_planet;
         private System.Windows.Forms.ComboBox cmb_category;
         private System.Windows.Forms.ComboBox cmb_position;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lbl_Map_text;
         private System.Windows.Forms.Label lbl_SelectedRoute_text;
@@ -412,6 +411,7 @@ namespace HyperSpaceSystem
         private System.Windows.Forms.Label lbl_Image;
         private System.Windows.Forms.PictureBox Pict_planetRoute;
         private System.Windows.Forms.Button btn_save;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

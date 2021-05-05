@@ -113,24 +113,9 @@
         <map>Kashyyyk.png</map>
       </defineRoute>
       <defineRoutes>
-        <Ordes>Takodana-Naboo</Ordes>
-        <selectedRoute>Corellian Trade Spine</selectedRoute>
-        <map>Byss.png</map>
-      </defineRoutes>
-      <defineRoutes>
-        <Ordes>Takodana-Naboo</Ordes>
-        <selectedRoute>Corellian Trade Spine</selectedRoute>
-        <map>Byss.png</map>
-      </defineRoutes>
-      <defineRoutes>
-        <Ordes>Takodana-Takodana</Ordes>
-        <selectedRoute>Ison Trade Corridor</selectedRoute>
-        <map>Endor.png</map>
-      </defineRoutes>
-      <defineRoutes>
-        <Ordes>Dathomir-Naboo</Ordes>
-        <selectedRoute>Hydian Way</selectedRoute>
-        <map>Devaron.png</map>
+        <OrDes>Takodana-Takodana</OrDes>
+        <selectedRoute>Corellian Run</selectedRoute>
+        <map>corellia.jpg</map>
       </defineRoutes>
     </definedRoutes>
   </hyperspaceRoutes>
