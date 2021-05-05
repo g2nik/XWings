@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Graella;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,15 +26,12 @@ namespace HyperSpaceSystem
         {
             pstOrigen =  fcn.getRoute(latORI,longORI);
             pstDestination =fcn.getRoute( int.Parse(lbl_lat.Text),int.Parse( lbl_long.Text));
-            if (pstOrigen.major300 ||pstDestination.major300)
-            {
-                MessageBox.Show("No hay ruta segura");
-            }
-            else
-            {
-                MessageBox.Show(pstOrigen.LAT + " " + pstOrigen.LONG, " " + pstOrigen.codiRoute);
-                MessageBox.Show(pstDestination.LAT + " " + pstDestination.LONG + " ", pstDestination.codiRoute);
-            }
+            PlanetTable pt = new PlanetTable();
+            pt.Lat = pstOrigen.LAT;
+            pt.Lat = pstOrigen.LONG;
+            panel1.Controls.Add(pt);
+            MessageBox.Show(pstOrigen.LAT + " " + pstOrigen.LONG, " " + pstOrigen.codiRoute);
+                MessageBox.Show(pstDestination.LAT + " " + pstDestination.LONG + " ", pstDestination.codiRoute);           
         }
 
         public Form1()

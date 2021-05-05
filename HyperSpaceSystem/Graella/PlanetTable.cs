@@ -12,28 +12,29 @@ namespace Graella
 {
     public partial class PlanetTable: UserControl
     {
-
+        Panel p1, p2;
         #region propfulls 
 
-        private string lat, lng, lat1, lng1, planeta;
-        public string Lat
+        private int lat, lng, lat1, lng1;
+        string planeta;
+        public int Lat
         {
             get { return lat; }
             set { lat = value; }
         }
 
-        public string Lng
+        public int Lng
         {
             get { return lng; }
-            set { lng = value; }
+            set { lng = value; PaintChart(lat, Lng); }
         }
 
-        public string Lat1
+        public int Lat1
         {
             get { return lat1; }
             set { lat1 = value; }
         }
-        public string Lng1
+        public int Lng1
         {
             get { return lng1; }
             set { lng1 = value; }
@@ -49,6 +50,20 @@ namespace Graella
         {
             InitializeComponent();
         }
+        private void PaintChart(int lat, int lng)
+        {
+            Panel p1 = new Panel();
+            Panel p2 = new Panel();
+            p1.Width = 100;
+            p1.Height = 100;
+            p2.Width = 10;
+            p2.Height = 10;
+            p1.BackColor = Color.Red;
+            p1.Location = new Point(100, 10);
+            p1.BringToFront();
+            this.Controls.Add(p1);
+        }
+
 
         private void UserControl1_Load(object sender, EventArgs e)
         {

@@ -48,6 +48,7 @@ namespace HyperSpaceSystem
             this.cmb_planet = new System.Windows.Forms.ComboBox();
             this.cmb_category = new System.Windows.Forms.ComboBox();
             this.cmb_position = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -234,11 +235,19 @@ namespace HyperSpaceSystem
             // cmb_position
             // 
             this.cmb_position.FormattingEnabled = true;
-            this.cmb_position.Location = new System.Drawing.Point(765, 69);
+            this.cmb_position.Location = new System.Drawing.Point(771, 82);
             this.cmb_position.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmb_position.Name = "cmb_position";
             this.cmb_position.Size = new System.Drawing.Size(180, 28);
             this.cmb_position.TabIndex = 36;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Location = new System.Drawing.Point(29, 158);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1147, 659);
+            this.panel1.TabIndex = 38;
             // 
             // Form1
             // 
@@ -264,6 +273,7 @@ namespace HyperSpaceSystem
             this.Controls.Add(this.btn_Search);
             this.Controls.Add(this.cmb_planet);
             this.Controls.Add(this.cmb_category);
+            this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -295,6 +305,7 @@ namespace HyperSpaceSystem
         private System.Windows.Forms.ComboBox cmb_planet;
         private System.Windows.Forms.ComboBox cmb_category;
         private System.Windows.Forms.ComboBox cmb_position;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
