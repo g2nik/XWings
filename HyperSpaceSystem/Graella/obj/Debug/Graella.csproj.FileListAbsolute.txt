@@ -1,0 +1,8 @@
+C:\Users\Miguel\Desktop\GitHub\XWings\HyperSpaceSystem\Graella\bin\Debug\Graella.dll
+C:\Users\Miguel\Desktop\GitHub\XWings\HyperSpaceSystem\Graella\bin\Debug\Graella.pdb
+C:\Users\Miguel\Desktop\GitHub\XWings\HyperSpaceSystem\Graella\obj\Debug\Graella.csprojAssemblyReference.cache
+C:\Users\Miguel\Desktop\GitHub\XWings\HyperSpaceSystem\Graella\obj\Debug\Graella.PlanetTable.resources
+C:\Users\Miguel\Desktop\GitHub\XWings\HyperSpaceSystem\Graella\obj\Debug\Graella.csproj.GenerateResource.cache
+C:\Users\Miguel\Desktop\GitHub\XWings\HyperSpaceSystem\Graella\obj\Debug\Graella.csproj.CoreCompileInputs.cache
+C:\Users\Miguel\Desktop\GitHub\XWings\HyperSpaceSystem\Graella\obj\Debug\Graella.dll
+C:\Users\Miguel\Desktop\GitHub\XWings\HyperSpaceSystem\Graella\obj\Debug\Graella.pdb

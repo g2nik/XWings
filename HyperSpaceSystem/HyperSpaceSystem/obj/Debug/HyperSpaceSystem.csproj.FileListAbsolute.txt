@@ -21,3 +21,16 @@ C:\Users\Snake\Documents\GitHub\XWings\HyperSpaceSystem\HyperSpaceSystem\obj\Deb
 C:\Users\Snake\Documents\GitHub\XWings\HyperSpaceSystem\HyperSpaceSystem\obj\Debug\HyperSpaceSystem.csproj.CoreCompileInputs.cache
 C:\Users\Snake\Documents\GitHub\XWings\HyperSpaceSystem\HyperSpaceSystem\obj\Debug\HyperSpaceSystem.exe
 C:\Users\Snake\Documents\GitHub\XWings\HyperSpaceSystem\HyperSpaceSystem\obj\Debug\HyperSpaceSystem.pdb
+C:\Users\Miguel\Desktop\GitHub\XWings\HyperSpaceSystem\HyperSpaceSystem\Ejecutables\HyperSpaceSystem.exe.config
+C:\Users\Miguel\Desktop\GitHub\XWings\HyperSpaceSystem\HyperSpaceSystem\Ejecutables\HyperSpaceSystem.exe
+C:\Users\Miguel\Desktop\GitHub\XWings\HyperSpaceSystem\HyperSpaceSystem\Ejecutables\HyperSpaceSystem.pdb
+C:\Users\Miguel\Desktop\GitHub\XWings\HyperSpaceSystem\HyperSpaceSystem\obj\Debug\HyperSpaceSystem.csprojAssemblyReference.cache
+C:\Users\Miguel\Desktop\GitHub\XWings\HyperSpaceSystem\HyperSpaceSystem\obj\Debug\HyperSpaceSystem.Form1.resources
+C:\Users\Miguel\Desktop\GitHub\XWings\HyperSpaceSystem\HyperSpaceSystem\obj\Debug\HyperSpaceSystem.Properties.Resources.resources
+C:\Users\Miguel\Desktop\GitHub\XWings\HyperSpaceSystem\HyperSpaceSystem\obj\Debug\HyperSpaceSystem.csproj.GenerateResource.cache
+C:\Users\Miguel\Desktop\GitHub\XWings\HyperSpaceSystem\HyperSpaceSystem\obj\Debug\HyperSpaceSystem.csproj.CoreCompileInputs.cache
+C:\Users\Miguel\Desktop\GitHub\XWings\HyperSpaceSystem\HyperSpaceSystem\obj\Debug\HyperSpaceSystem.exe
+C:\Users\Miguel\Desktop\GitHub\XWings\HyperSpaceSystem\HyperSpaceSystem\obj\Debug\HyperSpaceSystem.pdb
+C:\Users\Miguel\Desktop\GitHub\XWings\HyperSpaceSystem\HyperSpaceSystem\Ejecutables\Graella.dll
+C:\Users\Miguel\Desktop\GitHub\XWings\HyperSpaceSystem\HyperSpaceSystem\Ejecutables\Graella.pdb
+C:\Users\Miguel\Desktop\GitHub\XWings\HyperSpaceSystem\HyperSpaceSystem\obj\Debug\HyperSpaceSystem.csproj.CopyComplete
