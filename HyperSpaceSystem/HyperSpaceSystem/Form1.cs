@@ -24,14 +24,12 @@ namespace HyperSpaceSystem
 
         private void getTableRoute()
         {
-            pstOrigen =  fcn.getRoute(latORI,longORI);
-            pstDestination =fcn.getRoute( int.Parse(lbl_lat.Text),int.Parse( lbl_long.Text));
+            pstOrigen = fcn.getRoute(latORI, longORI);
+            pstDestination = fcn.getRoute(int.Parse(lbl_lat.Text), int.Parse(lbl_long.Text));
             PlanetTable pt = new PlanetTable();
             pt.Lat = pstOrigen.LAT;
             pt.Lat = pstOrigen.LONG;
             panel1.Controls.Add(pt);
-            MessageBox.Show(pstOrigen.LAT + " " + pstOrigen.LONG, " " + pstOrigen.codiRoute);
-                MessageBox.Show(pstDestination.LAT + " " + pstDestination.LONG + " ", pstDestination.codiRoute);           
         }
 
         public Form1()
@@ -100,7 +98,7 @@ namespace HyperSpaceSystem
         {
             string selectedPlanet = cmb_position.SelectedItem.ToString(); ;
 
-            XmlNodeList selectedPlanetChilds = xDoc.SelectNodes("/SpaceData/planets/planet[name=\"" + selectedPlanet + "\"]/*");
+            XmlNodeList selectedPlanetChilds = xDoc.SelectNodes("/hyperSpacedata/planets/planet[name=\"" + selectedPlanet + "\"]/*");
             List<string> selectedPlanetData = new List<string>();
             foreach (XmlNode node in selectedPlanetChilds)
             {
@@ -108,7 +106,72 @@ namespace HyperSpaceSystem
             }
 
             latORI = Int32.Parse(selectedPlanetChilds[3].SelectSingleNode("lat").InnerText);
-            longORI= Int32.Parse(selectedPlanetChilds[3].SelectSingleNode("long").InnerText);
+            longORI = Int32.Parse(selectedPlanetChilds[3].SelectSingleNode("long").InnerText);
+        }
+        private void btn_save_Click(object sender, EventArgs e)
+        {
+            XmlDocument doc = new XmlDocument();
+            doc.Load(ruta);
+
+            XmlNode nodeList = doc.SelectSingleNode("/hyperSpacedata/hyperspaceRoutes/definedRoutes");            
+            XmlElement route = doc.CreateElement("defineRoutes"); ;
+            
+            XmlElement ordes = doc.CreateElement("Ordes");
+            XmlElement selectedRoute = doc.CreateElement("selectedRoute");
+            XmlElement map = doc.CreateElement("map");
+            
+            ordes.InnerText = lbl_orDes.Text;
+            selectedRoute.InnerText = lsb_routes.SelectedItem.ToString();
+            map.InnerText = lbl_Image.Text;
+            
+            route.AppendChild(ordes);
+            route.AppendChild(selectedRoute); 
+            route.AppendChild(map);
+            nodeList.AppendChild(route);
+
+            doc.Save(ruta);
+        }
+
+        private void lsb_routes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lbl_orDes.Text = cmb_position.SelectedItem + "-" + cmb_planet.SelectedItem;
+
+            XmlNodeList selectedPlanetChilds = xDoc.SelectNodes("/hyperSpacedata/hyperspaceRoutes/definedRoutes/defineRoute[selectedRoute=\"" + lsb_routes.SelectedItem.ToString() + "\"]/*");
+            List<string> selectedPlanetData = new List<string>();
+            foreach (XmlNode node in selectedPlanetChilds)
+            {
+                selectedPlanetData.Add(node.InnerText);
+            }
+            try
+            {
+                lbl_Image.Text = selectedPlanetData[2];
+            }
+            catch (Exception)
+            {
+                lbl_Image.Text = "No image Selected";
+                Pict_planetRoute.Image = null;
+            }
+            
+            if (lsb_routes.SelectedItem.ToString() != "" && lsb_routes.SelectedItem.ToString() != "Minor hyperspace route" && lsb_routes.SelectedItem.ToString() != "Major hyperspace route")
+            {
+                lbl_Route.Text = lsb_routes.SelectedItem.ToString();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog opflg = new OpenFileDialog())
+            {
+                opflg.InitialDirectory = Application.StartupPath+ "\\Recursos\\planetes";
+
+                if (opflg.ShowDialog() == DialogResult.OK)
+                {
+                    string ruta = opflg.FileName;
+
+                    lbl_Image.Text= opflg.FileName.Substring(opflg.FileName.LastIndexOf('\\') +1);
+                    Pict_planetRoute.Image =Image.FromFile(ruta);
+                }
+            }
         }
 
         private void showDataPlanetSelectedDest()
@@ -117,7 +180,7 @@ namespace HyperSpaceSystem
             lsb_routes.Visible = true;
             lsb_routes.Items.Clear();
 
-            XmlNodeList selectedPlanetChilds = xDoc.SelectNodes("/SpaceData/planets/planet[name=\"" + selectedPlanet + "\"]/*");
+            XmlNodeList selectedPlanetChilds = xDoc.SelectNodes("/hyperSpacedata/planets/planet[name=\"" + selectedPlanet + "\"]/*");
             List<string> selectedPlanetData = new List<string>();
             foreach (XmlNode node in selectedPlanetChilds)
             {
@@ -147,26 +210,31 @@ namespace HyperSpaceSystem
             lbl_planet.Text = selectedPlanet;
 
             XmlNodeList routes = selectedPlanetChilds[4].ChildNodes;
-
-            string minorRoute = "MINOR";
-
-            if (routes.Count > 1)
+            foreach (XmlNode item in routes)
             {
-                lsb_routes.Items.Add("MAJOR");
-            }
-            else
-            {
-                minorRoute = "";
+                getMayorMinor(item.InnerText, routes.Count);
             }
 
-            foreach (XmlNode route in routes)
-            {
-                lsb_routes.Items.Add(route.InnerText);
-                lsb_routes.Items.Add(" ");
-                lsb_routes.Items.Add(minorRoute);
-                minorRoute = " ";
-            }
         }
+
+        private void getMayorMinor(string ruta, int NumRutes)
+        {
+            string selectedPlanet = ruta;
+
+
+            XmlNodeList selectedPlanetChilds = xDoc.SelectNodes("/hyperSpacedata/hyperspaceRoutes/Route[nameRoute=\"" + selectedPlanet + "\"]/*");
+            List<string> selectedPlanetData = new List<string>();
+            foreach (XmlNode node in selectedPlanetChilds)
+            {
+                selectedPlanetData.Add(node.InnerText);
+            }
+
+            lsb_routes.Items.Add(selectedPlanetData[0]);
+            lsb_routes.Items.Add(selectedPlanetData[1]);
+            lsb_routes.Items.Add("");
+
+        }
+
         private void cmb_category_SelectedIndexChanged(object sender, EventArgs e)
         {
             string categorySelected = cmb_category.SelectedItem.ToString();
@@ -210,11 +278,7 @@ namespace HyperSpaceSystem
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+       
         private void getPlanets()
         {
             XmlNodeList planetsList = xDoc.GetElementsByTagName("name");

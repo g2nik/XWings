@@ -34,3 +34,6 @@ C:\Users\Miguel\Desktop\GitHub\XWings\HyperSpaceSystem\HyperSpaceSystem\obj\Debu
 C:\Users\Miguel\Desktop\GitHub\XWings\HyperSpaceSystem\HyperSpaceSystem\Ejecutables\Graella.dll
 C:\Users\Miguel\Desktop\GitHub\XWings\HyperSpaceSystem\HyperSpaceSystem\Ejecutables\Graella.pdb
 C:\Users\Miguel\Desktop\GitHub\XWings\HyperSpaceSystem\HyperSpaceSystem\obj\Debug\HyperSpaceSystem.csproj.CopyComplete
+C:\Users\Mario\Desktop\Github\G2Team\XWings\HyperSpaceSystem\HyperSpaceSystem\Ejecutables\Graella.dll
+C:\Users\Mario\Desktop\Github\G2Team\XWings\HyperSpaceSystem\HyperSpaceSystem\Ejecutables\Graella.pdb
+C:\Users\Mario\Desktop\Github\G2Team\XWings\HyperSpaceSystem\HyperSpaceSystem\obj\Debug\HyperSpaceSystem.csproj.CopyComplete
