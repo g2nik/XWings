@@ -28,6 +28,7 @@ namespace HyperSpaceSystem
         }
         private void Form1_Load(object sender, EventArgs e)
         {
+            xDoc.Load(ruta);
             cleanTextbox();
             getNodes();
             getplanets();
@@ -36,6 +37,7 @@ namespace HyperSpaceSystem
         #region Buttons
         private void btn_Search_Click(object sender, EventArgs e)
         {
+            xDoc.Load(ruta);
             XmlNodeList planetList = xDoc.GetElementsByTagName("planet");
             getLongLatOrigenPlanet();
             showDataPlanetSelectedDest();
@@ -56,7 +58,7 @@ namespace HyperSpaceSystem
             doc.Load(ruta);
 
             XmlNode nodeList = doc.SelectSingleNode("/hyperSpacedata/hyperspaceRoutes/definedRoutes");
-            XmlElement route = doc.CreateElement("defineRoutes"); ;
+            XmlElement route = doc.CreateElement("defineRoute"); ;
             XmlElement ordes = doc.CreateElement("OrDes");
             XmlElement selectedRoute = doc.CreateElement("selectedRoute");
             XmlElement map = doc.CreateElement("map");
@@ -89,7 +91,6 @@ namespace HyperSpaceSystem
         #endregion
 
         #region Index Changed
-
         private void lsb_routes_SelectedIndexChanged(object sender, EventArgs e)
         {
             lbl_orDes.Text = cmb_position.SelectedItem + "-" + cmb_planet.SelectedItem;
@@ -100,6 +101,7 @@ namespace HyperSpaceSystem
             {
                 selectedPlanetData.Add(node.InnerText);
             }
+
             try
             {
                 lbl_Image.Text = selectedPlanetData[2];
@@ -150,7 +152,7 @@ namespace HyperSpaceSystem
 
         private void getNodes()
         {
-            xDoc.Load(ruta);
+            //xDoc.Load(ruta);
             XmlNode root = xDoc.DocumentElement;
             cmb_category.Items.Add(" ");
             cmb_category.SelectedItem = " ";

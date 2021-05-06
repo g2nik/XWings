@@ -112,11 +112,6 @@
         <selectedRoute>Randon Run</selectedRoute>
         <map>Kashyyyk.png</map>
       </defineRoute>
-      <defineRoutes>
-        <OrDes>Takodana-Takodana</OrDes>
-        <selectedRoute>Corellian Run</selectedRoute>
-        <map>corellia.jpg</map>
-      </defineRoutes>
     </definedRoutes>
   </hyperspaceRoutes>
   <filiations>
