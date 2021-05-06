@@ -1,0 +1,15 @@
+C:\Users\Snake\Documents\GitHub\XWings\WeaponsSystem\bin\Debug\WeaponsSystem.exe.config
+C:\Users\Snake\Documents\GitHub\XWings\WeaponsSystem\bin\Debug\WeaponsSystem.exe
+C:\Users\Snake\Documents\GitHub\XWings\WeaponsSystem\bin\Debug\WeaponsSystem.pdb
+C:\Users\Snake\Documents\GitHub\XWings\WeaponsSystem\bin\Debug\Interop.WMPLib.dll
+C:\Users\Snake\Documents\GitHub\XWings\WeaponsSystem\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Snake\Documents\GitHub\XWings\WeaponsSystem\obj\Debug\WeaponsSystem.csprojAssemblyReference.cache
+C:\Users\Snake\Documents\GitHub\XWings\WeaponsSystem\obj\Debug\Interop.WMPLib.dll
+C:\Users\Snake\Documents\GitHub\XWings\WeaponsSystem\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Snake\Documents\GitHub\XWings\WeaponsSystem\obj\Debug\WeaponsSystem.csproj.ResolveComReference.cache
+C:\Users\Snake\Documents\GitHub\XWings\WeaponsSystem\obj\Debug\WeaponsSystem.Form1.resources
+C:\Users\Snake\Documents\GitHub\XWings\WeaponsSystem\obj\Debug\WeaponsSystem.Properties.Resources.resources
+C:\Users\Snake\Documents\GitHub\XWings\WeaponsSystem\obj\Debug\WeaponsSystem.csproj.GenerateResource.cache
+C:\Users\Snake\Documents\GitHub\XWings\WeaponsSystem\obj\Debug\WeaponsSystem.csproj.CoreCompileInputs.cache
+C:\Users\Snake\Documents\GitHub\XWings\WeaponsSystem\obj\Debug\WeaponsSystem.exe
+C:\Users\Snake\Documents\GitHub\XWings\WeaponsSystem\obj\Debug\WeaponsSystem.pdb
