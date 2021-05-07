@@ -33,17 +33,21 @@ namespace WeaponsSystem
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnDetectar = new System.Windows.Forms.Button();
             this.btnAtacar = new System.Windows.Forms.Button();
-            this.lblTipo = new System.Windows.Forms.Label();
             this.btnIzquierda = new System.Windows.Forms.Button();
             this.btnDerecha = new System.Windows.Forms.Button();
             this.btnAbajo = new System.Windows.Forms.Button();
             this.btnArriba = new System.Windows.Forms.Button();
-            this.image = new System.Windows.Forms.PictureBox();
-            this.beforeVideo = new System.Windows.Forms.Timer(this.components);
-            this.video = new AxWMPLib.AxWindowsMediaPlayer();
-            this.afterVideo = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.image)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.video)).BeginInit();
+            this.imagenNave = new System.Windows.Forms.PictureBox();
+            this.beforeVideoTimer = new System.Windows.Forms.Timer(this.components);
+            this.videoDestruccion = new AxWMPLib.AxWindowsMediaPlayer();
+            this.afterVideoTimer = new System.Windows.Forms.Timer(this.components);
+            this.imagenPlanos = new System.Windows.Forms.PictureBox();
+            this.lblPlanos = new System.Windows.Forms.Label();
+            this.videoModelo = new AxWMPLib.AxWindowsMediaPlayer();
+            ((System.ComponentModel.ISupportInitialize)(this.imagenNave)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.videoDestruccion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imagenPlanos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.videoModelo)).BeginInit();
             this.SuspendLayout();
             // 
             // btnDetectar
@@ -51,9 +55,9 @@ namespace WeaponsSystem
             this.btnDetectar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDetectar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDetectar.ForeColor = System.Drawing.Color.PaleGreen;
-            this.btnDetectar.Location = new System.Drawing.Point(502, 550);
+            this.btnDetectar.Location = new System.Drawing.Point(224, 582);
             this.btnDetectar.Name = "btnDetectar";
-            this.btnDetectar.Size = new System.Drawing.Size(111, 45);
+            this.btnDetectar.Size = new System.Drawing.Size(177, 64);
             this.btnDetectar.TabIndex = 0;
             this.btnDetectar.Text = "Detectar";
             this.btnDetectar.UseVisualStyleBackColor = true;
@@ -61,29 +65,17 @@ namespace WeaponsSystem
             // 
             // btnAtacar
             // 
+            this.btnAtacar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
             this.btnAtacar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAtacar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtacar.ForeColor = System.Drawing.Color.PaleGreen;
-            this.btnAtacar.Location = new System.Drawing.Point(502, 601);
+            this.btnAtacar.ForeColor = System.Drawing.Color.Red;
+            this.btnAtacar.Location = new System.Drawing.Point(425, 582);
             this.btnAtacar.Name = "btnAtacar";
-            this.btnAtacar.Size = new System.Drawing.Size(111, 45);
+            this.btnAtacar.Size = new System.Drawing.Size(201, 64);
             this.btnAtacar.TabIndex = 2;
             this.btnAtacar.Text = "Atacar";
-            this.btnAtacar.UseVisualStyleBackColor = true;
+            this.btnAtacar.UseVisualStyleBackColor = false;
             this.btnAtacar.Click += new System.EventHandler(this.btnAtacar_Click);
-            // 
-            // lblTipo
-            // 
-            this.lblTipo.AutoSize = true;
-            this.lblTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipo.ForeColor = System.Drawing.Color.PaleGreen;
-            this.lblTipo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblTipo.Location = new System.Drawing.Point(255, 582);
-            this.lblTipo.Name = "lblTipo";
-            this.lblTipo.Size = new System.Drawing.Size(132, 46);
-            this.lblTipo.TabIndex = 3;
-            this.lblTipo.Text = "Aliado";
-            this.lblTipo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnIzquierda
             // 
@@ -137,58 +129,92 @@ namespace WeaponsSystem
             this.btnArriba.UseVisualStyleBackColor = true;
             this.btnArriba.Click += new System.EventHandler(this.btnArriba_Click);
             // 
-            // image
+            // imagenNave
             // 
-            this.image.BackColor = System.Drawing.Color.Transparent;
-            this.image.Image = ((System.Drawing.Image)(resources.GetObject("image.Image")));
-            this.image.Location = new System.Drawing.Point(250, 250);
-            this.image.Name = "image";
-            this.image.Size = new System.Drawing.Size(128, 128);
-            this.image.TabIndex = 8;
-            this.image.TabStop = false;
+            this.imagenNave.BackColor = System.Drawing.Color.Transparent;
+            this.imagenNave.Image = ((System.Drawing.Image)(resources.GetObject("imagenNave.Image")));
+            this.imagenNave.Location = new System.Drawing.Point(250, 250);
+            this.imagenNave.Name = "imagenNave";
+            this.imagenNave.Size = new System.Drawing.Size(128, 128);
+            this.imagenNave.TabIndex = 8;
+            this.imagenNave.TabStop = false;
             // 
-            // beforeVideo
+            // beforeVideoTimer
             // 
-            this.beforeVideo.Interval = 300;
-            this.beforeVideo.Tick += new System.EventHandler(this.beforeVideo_Tick);
+            this.beforeVideoTimer.Interval = 300;
+            this.beforeVideoTimer.Tick += new System.EventHandler(this.beforeVideo_Tick);
             // 
-            // video
+            // videoDestruccion
             // 
-            this.video.Enabled = true;
-            this.video.Location = new System.Drawing.Point(-1, 0);
-            this.video.Name = "video";
-            this.video.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("video.OcxState")));
-            this.video.Size = new System.Drawing.Size(627, 667);
-            this.video.TabIndex = 9;
+            this.videoDestruccion.Enabled = true;
+            this.videoDestruccion.Location = new System.Drawing.Point(-1, -6);
+            this.videoDestruccion.Name = "videoDestruccion";
+            this.videoDestruccion.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("videoDestruccion.OcxState")));
+            this.videoDestruccion.Size = new System.Drawing.Size(1193, 682);
+            this.videoDestruccion.TabIndex = 9;
             // 
-            // afterVideo
+            // afterVideoTimer
             // 
-            this.afterVideo.Interval = 1000;
-            this.afterVideo.Tick += new System.EventHandler(this.afterVideo_Tick);
+            this.afterVideoTimer.Interval = 1000;
+            this.afterVideoTimer.Tick += new System.EventHandler(this.afterVideo_Tick);
+            // 
+            // imagenPlanos
+            // 
+            this.imagenPlanos.Location = new System.Drawing.Point(638, 321);
+            this.imagenPlanos.Name = "imagenPlanos";
+            this.imagenPlanos.Size = new System.Drawing.Size(496, 322);
+            this.imagenPlanos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imagenPlanos.TabIndex = 10;
+            this.imagenPlanos.TabStop = false;
+            // 
+            // lblPlanos
+            // 
+            this.lblPlanos.AutoSize = true;
+            this.lblPlanos.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlanos.ForeColor = System.Drawing.Color.PaleGreen;
+            this.lblPlanos.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblPlanos.Location = new System.Drawing.Point(632, 9);
+            this.lblPlanos.Name = "lblPlanos";
+            this.lblPlanos.Size = new System.Drawing.Size(97, 31);
+            this.lblPlanos.TabIndex = 12;
+            this.lblPlanos.Text = "Planos";
+            this.lblPlanos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // videoModelo
+            // 
+            this.videoModelo.Enabled = true;
+            this.videoModelo.Location = new System.Drawing.Point(638, 43);
+            this.videoModelo.Name = "videoModelo";
+            this.videoModelo.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("videoModelo.OcxState")));
+            this.videoModelo.Size = new System.Drawing.Size(496, 272);
+            this.videoModelo.TabIndex = 13;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(625, 655);
-            this.Controls.Add(this.video);
-            this.Controls.Add(this.image);
+            this.ClientSize = new System.Drawing.Size(1148, 655);
+            this.Controls.Add(this.videoDestruccion);
+            this.Controls.Add(this.lblPlanos);
+            this.Controls.Add(this.imagenPlanos);
+            this.Controls.Add(this.imagenNave);
             this.Controls.Add(this.btnArriba);
             this.Controls.Add(this.btnAbajo);
             this.Controls.Add(this.btnDerecha);
             this.Controls.Add(this.btnIzquierda);
-            this.Controls.Add(this.lblTipo);
             this.Controls.Add(this.btnAtacar);
             this.Controls.Add(this.btnDetectar);
+            this.Controls.Add(this.videoModelo);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Weapons System";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
-            ((System.ComponentModel.ISupportInitialize)(this.image)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.video)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imagenNave)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.videoDestruccion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imagenPlanos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.videoModelo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,15 +224,17 @@ namespace WeaponsSystem
 
         private System.Windows.Forms.Button btnDetectar;
         private System.Windows.Forms.Button btnAtacar;
-        private System.Windows.Forms.Label lblTipo;
         private System.Windows.Forms.Button btnIzquierda;
         private System.Windows.Forms.Button btnDerecha;
         private System.Windows.Forms.Button btnAbajo;
         private System.Windows.Forms.Button btnArriba;
-        private System.Windows.Forms.PictureBox image;
-        private System.Windows.Forms.Timer beforeVideo;
-        private AxWMPLib.AxWindowsMediaPlayer video;
-        private System.Windows.Forms.Timer afterVideo;
+        private System.Windows.Forms.PictureBox imagenNave;
+        private System.Windows.Forms.Timer beforeVideoTimer;
+        private AxWMPLib.AxWindowsMediaPlayer videoDestruccion;
+        private System.Windows.Forms.Timer afterVideoTimer;
+        private System.Windows.Forms.PictureBox imagenPlanos;
+        private System.Windows.Forms.Label lblPlanos;
+        private AxWMPLib.AxWindowsMediaPlayer videoModelo;
     }
 }
 
