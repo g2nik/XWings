@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="image.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="imagenNave.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAABxNJREFUeF7tm9uO2zYQhr3ppn2FoEAfoRd9g7QFAqRA+0yb5sG2RdsHCJDLILdB
@@ -154,23 +154,36 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAHByVqv/AQRVap0zaDk+AAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="beforeVideo.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="beforeVideoTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="video.OcxState" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="videoDestruccion.OcxState" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACFTeXN0
-        ZW0uV2luZG93cy5Gb3Jtcy5BeEhvc3QrU3RhdGUBAAAABERhdGEHAgIAAAAJAwAAAA8DAAAASQEAAAIB
-        AAAAAQAAAAAAAAAAAAAAADQBAAAAAwAACACSAAAAQwA6AFwAVQBzAGUAcgBzAFwAUwBuAGEAawBlAFwA
+        ZW0uV2luZG93cy5Gb3Jtcy5BeEhvc3QrU3RhdGUBAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAVwEAAAIB
+        AAAAAQAAAAAAAAAAAAAAAEIBAAAAAwAACACgAAAAQwA6AFwAVQBzAGUAcgBzAFwAUwBuAGEAawBlAFwA
         RABvAGMAdQBtAGUAbgB0AHMAXABHAGkAdABIAHUAYgBcAFgAVwBpAG4AZwBzAFwAVwBlAGEAcABvAG4A
-        cwBTAHkAcwB0AGUAbQBcAGIAaQBuAFwARABlAGIAdQBnAFwAcwBoAG8AbwB0AC4AbQBwADQAAAAFAAAA
-        AAAAAPA/AwAAAAAABQAAAAAAAAAAAAgAAgAAAAAAAwABAAAACwAAAAMAAAAAAAsA//8IAAIAAAAAAAMA
-        MgAAAAsAAAAIAAoAAABuAG8AbgBlAAAACwD//wsAAAALAAAACwAAAAsAAAAIAAIAAAAAAAgAAgAAAAAA
-        CAACAAAAAAAIAAIAAAAAAAsAAAAdPgAAXjMAAAs=
+        cwBTAHkAcwB0AGUAbQBcAGIAaQBuAFwARABlAGIAdQBnAFwAdgBpAGQAZQBvAHMAXABzAGgAbwBvAHQA
+        LgBtAHAANAAAAAUAAAAAAAAA8D8DAAAAAAAFAAAAAAAAAAAACAACAAAAAAADAAEAAAALAAAAAwAAAAAA
+        CwD//wgAAgAAAAAAAwAyAAAACwAAAAgACgAAAG4AbwBuAGUAAAALAP//CwAAAAsAAAALAAAACwAAAAgA
+        AgAAAAAACAACAAAAAAAIAAIAAAAAAAgAAgAAAAAACwAAAM1AAADwRAAACw==
 </value>
   </data>
-  <metadata name="afterVideo.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="afterVideoTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>136, 17</value>
   </metadata>
+  <data name="videoModelo.OcxState" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACFTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5BeEhvc3QrU3RhdGUBAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAVwEAAAIB
+        AAAAAQAAAAAAAAAAAAAAAEIBAAAAAwAACACgAAAAQwA6AFwAVQBzAGUAcgBzAFwAUwBuAGEAawBlAFwA
+        RABvAGMAdQBtAGUAbgB0AHMAXABHAGkAdABIAHUAYgBcAFgAVwBpAG4AZwBzAFwAVwBlAGEAcABvAG4A
+        cwBTAHkAcwB0AGUAbQBcAGIAaQBuAFwARABlAGIAdQBnAFwAdgBpAGQAZQBvAHMAXABzAGgAbwBvAHQA
+        LgBtAHAANAAAAAUAAAAAAAAA8D8DAAAAAAAFAAAAAAAAAAAACAACAAAAAAADAAEAAAALAAAAAwAAAAAA
+        CwD//wgAAgAAAAAAAwAyAAAACwAAAAgACgAAAG4AbwBuAGUAAAALAP//CwAAAAsAAAALAAAACwAAAAgA
+        AgAAAAAACAACAAAAAAAIAAIAAAAAAAgAAgAAAAAACwAAAEMzAAAdHAAACw==
+</value>
+  </data>
 </root>
