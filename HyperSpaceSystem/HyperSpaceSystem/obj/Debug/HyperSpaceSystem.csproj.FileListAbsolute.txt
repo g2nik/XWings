@@ -10,7 +10,6 @@ C:\Users\Mario\Desktop\Github\G2Team\XWings\HyperSpaceSystem\HyperSpaceSystem\ob
 C:\Users\Mario\Desktop\Github\G2Team\XWings\HyperSpaceSystem\HyperSpaceSystem\Ejecutables\HyperSpaceSystem.exe.config
 C:\Users\Mario\Desktop\Github\G2Team\XWings\HyperSpaceSystem\HyperSpaceSystem\Ejecutables\HyperSpaceSystem.exe
 C:\Users\Mario\Desktop\Github\G2Team\XWings\HyperSpaceSystem\HyperSpaceSystem\Ejecutables\HyperSpaceSystem.pdb
-C:\Users\Mario\Desktop\Github\G2Team\XWings\HyperSpaceSystem\HyperSpaceSystem\obj\Debug\HyperSpaceSystem.csprojAssemblyReference.cache
 C:\Users\Snake\Documents\GitHub\XWings\HyperSpaceSystem\HyperSpaceSystem\Ejecutables\HyperSpaceSystem.exe.config
 C:\Users\Snake\Documents\GitHub\XWings\HyperSpaceSystem\HyperSpaceSystem\Ejecutables\HyperSpaceSystem.exe
 C:\Users\Snake\Documents\GitHub\XWings\HyperSpaceSystem\HyperSpaceSystem\Ejecutables\HyperSpaceSystem.pdb
@@ -37,3 +36,4 @@ C:\Users\Miguel\Desktop\GitHub\XWings\HyperSpaceSystem\HyperSpaceSystem\obj\Debu
 C:\Users\Mario\Desktop\Github\G2Team\XWings\HyperSpaceSystem\HyperSpaceSystem\Ejecutables\Graella.dll
 C:\Users\Mario\Desktop\Github\G2Team\XWings\HyperSpaceSystem\HyperSpaceSystem\Ejecutables\Graella.pdb
 C:\Users\Mario\Desktop\Github\G2Team\XWings\HyperSpaceSystem\HyperSpaceSystem\obj\Debug\HyperSpaceSystem.csproj.CopyComplete
+C:\Users\Mario\Desktop\Github\G2Team\XWings\HyperSpaceSystem\HyperSpaceSystem\obj\Debug\HyperSpaceSystem.csprojAssemblyReference.cache

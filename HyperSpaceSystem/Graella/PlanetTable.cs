@@ -10,61 +10,65 @@ using System.Windows.Forms;
 
 namespace Graella
 {
-    public partial class PlanetTable: UserControl
+    public partial class PlanetTable : UserControl
     {
-        Panel p1, p2;
         #region propfulls 
-
-        private int lat, lng, lat1, lng1;
+        Panel p1 = new Panel();
+        Panel p2 = new Panel();
+        Label l1 = new Label();
+        private int num1, let1;
         string planeta;
-        public int Lat
+        public int Num1
         {
-            get { return lat; }
-            set { lat = value; }
+            get { return num1; }
+            set { num1 = value; }
         }
 
-        public int Lng
+        public int Let1
         {
-            get { return lng; }
-            set { lng = value; PaintChart(lat, Lng); }
-        }
-
-        public int Lat1
-        {
-            get { return lat1; }
-            set { lat1 = value; }
-        }
-        public int Lng1
-        {
-            get { return lng1; }
-            set { lng1 = value; }
+            get { return let1; }
+            set { let1 = value; PaintChart(num1, let1, Color.BlueViolet); }
         }
         public string Planeta
         {
             get { return planeta; }
-            set { planeta = value; }
+            set { planeta = value; l1.Text = value; }
         }
 
         #endregion
+        
         public PlanetTable()
         {
             InitializeComponent();
-        }
-        private void PaintChart(int lat, int lng)
-        {
-            Panel p1 = new Panel();
-            Panel p2 = new Panel();
-            p1.Width = 100;
-            p1.Height = 100;
+            p1.Width = 10;
+            p1.Tag = "P";
+            p1.Height = 10;
             p2.Width = 10;
+            p1.Tag = "P";
             p2.Height = 10;
+            p2.BackColor = Color.Red;
             p1.BackColor = Color.Red;
-            p1.Location = new Point(100, 10);
-            p1.BringToFront();
-            this.Controls.Add(p1);
         }
 
+        private void PaintChart(int let, int num, Color c)
+        {
+            foreach (Control ct in panel18.Controls)
+            {
+                if (ct.Tag != null && ct.Tag.ToString() == "P")
+                {
+                    panel18.Controls.Remove(ct);
+                }
+            }
+            Random rnd = new Random();
+            l1.ForeColor = Color.White;
+            l1.Location = new Point((int)(Math.Round((rnd.Next(1, 7) + 1) * 67.3) * 0.734) + (rnd.Next(1, 7) * 68), (int)Math.Round((rnd.Next(1, 6) * 37.5 * 0.63) + ((rnd.Next(1, 6) - 1) * 50)));
+            p1.Location = new Point((int)Math.Round(((let + 1) * 67.3) * 0.734) + (let * 68), (int)Math.Round((num * 37.5 * 0.63) + ((num - 1) * 50)));
+            p2.Location = new Point((int)(Math.Round((rnd.Next(1, 7) + 1) * 67.3) * 0.734) + (rnd.Next(1, 7) * 68), (int)Math.Round((rnd.Next(1, 6) * 37.5 * 0.63) + ((rnd.Next(1, 6) - 1) * 50)));
+            panel18.Controls.Add(p1);
+            panel18.Controls.Add(p2);
+            panel18.Controls.Add(l1);
 
+        }
         private void UserControl1_Load(object sender, EventArgs e)
         {
 

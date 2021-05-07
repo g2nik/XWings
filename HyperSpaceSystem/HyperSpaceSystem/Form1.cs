@@ -17,7 +17,6 @@ namespace HyperSpaceSystem
     {
         Fucions fcn = new Fucions();
         Fucions.PositionTable pstOrigen = new Fucions.PositionTable();
-        Fucions.PositionTable pstDestination = new Fucions.PositionTable();
         XmlDocument xDoc = new XmlDocument();
         string ruta = Application.StartupPath + "\\Recursos\\DataBank.xml";
         int latORI = 0, longORI = 0;
@@ -33,22 +32,32 @@ namespace HyperSpaceSystem
             getNodes();
             getplanets();
         }
-       
+
         #region Buttons
         private void btn_Search_Click(object sender, EventArgs e)
         {
+            PlanetTable pt = new PlanetTable();
+            pstOrigen.namePlanetDes = cmb_planet.SelectedItem.ToString();
+            Pict_planetRoute.Image = null;
+            lsb_routes.Items.Clear();
             xDoc.Load(ruta);
             XmlNodeList planetList = xDoc.GetElementsByTagName("planet");
             getLongLatOrigenPlanet();
             showDataPlanetSelectedDest();
-            getTableRoute();
+            getTableRoute(pt);
+
+            if (pstOrigen.major300)
+            {
+                deleteTableRoute(pt);
+                lsb_routes.Items.Clear();
+                MessageBox.Show("No es troba ruta segura");
+            }
             clearForm1();
         }
 
         private void clearForm1()
         {
             lbl_Route.Text = "";
-            lbl_planet.Text = "";
             lbl_orDes.Text = "";
         }
 
@@ -95,7 +104,7 @@ namespace HyperSpaceSystem
         {
             lbl_orDes.Text = cmb_position.SelectedItem + "-" + cmb_planet.SelectedItem;
             string ruta = lsb_routes.SelectedItem.ToString();
-            XmlNodeList selectedPlanetChilds = xDoc.SelectNodes("/hyperSpacedata/hyperspaceRoutes/definedRoutes/defineRoute[selectedRoute=\""+ruta+"\"]/*");
+            XmlNodeList selectedPlanetChilds = xDoc.SelectNodes("/hyperSpacedata/hyperspaceRoutes/definedRoutes/defineRoute[selectedRoute=\"" + ruta + "\"]/*");
             List<string> selectedPlanetData = new List<string>();
             foreach (XmlNode node in selectedPlanetChilds)
             {
@@ -172,19 +181,31 @@ namespace HyperSpaceSystem
             }
         }
 
-        private void getTableRoute()
+        private void deleteTableRoute(PlanetTable pt)
         {
+            panel1.Controls.Remove(pt);
+            PlanetTable pts = new PlanetTable();
+            Pict_planetRoute.Image = null;
+            panel1.Controls.Add(pts);
+        }
+
+        private void getTableRoute(PlanetTable pt)
+        {
+            foreach (Control item in panel1.Controls)
+            {
+                panel1.Controls.Remove(item);
+            }
+
             pstOrigen = fcn.getRoute(latORI, longORI);
-            pstDestination = fcn.getRoute(int.Parse(lbl_lat.Text), int.Parse(lbl_long.Text));
-            PlanetTable pt = new PlanetTable();
-            pt.Lat = pstOrigen.LAT;
-            pt.Lat = pstOrigen.LONG;
+            pt.Let1 = pstOrigen.LAT;
+            pt.Num1 = pstOrigen.LONG;
+            pt.Planeta = pstOrigen.namePlanetDes;
             panel1.Controls.Add(pt);
         }
 
         private void getLongLatOrigenPlanet()
         {
-            string selectedPlanet = cmb_position.SelectedItem.ToString(); ;
+            string selectedPlanet = cmb_position.SelectedItem.ToString();
             XmlNodeList selectedPlanetChilds = xDoc.SelectNodes("/hyperSpacedata/planets/planet[name=\"" + selectedPlanet + "\"]/*");
             List<string> selectedPlanetData = new List<string>();
 
@@ -259,7 +280,7 @@ namespace HyperSpaceSystem
         #region Show Data
         private void showDataPlanetSelectedDest()
         {
-            string selectedPlanet = cmb_planet.SelectedItem.ToString() ;
+            string selectedPlanet = cmb_planet.SelectedItem.ToString();
             lsb_routes.Visible = true;
             lsb_routes.Items.Clear();
 
@@ -280,7 +301,7 @@ namespace HyperSpaceSystem
 
             writeLbl(selectedPlanetChilds, selectedPlanetData);
 
-             XmlNodeList routes = selectedPlanetChilds[4].ChildNodes;
+            XmlNodeList routes = selectedPlanetChilds[4].ChildNodes;
             foreach (XmlNode item in routes)
             {
                 getMayorMinor(item.InnerText, routes.Count);

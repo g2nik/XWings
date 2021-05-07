@@ -112,6 +112,16 @@
         <selectedRoute>Randon Run</selectedRoute>
         <map>Kashyyyk.png</map>
       </defineRoute>
+      <defineRoute>
+        <OrDes>Takodana-Takodana</OrDes>
+        <selectedRoute>Corellian Run</selectedRoute>
+        <map>Byss.png</map>
+      </defineRoute>
+      <defineRoute>
+        <OrDes>Naboo-Manaan</OrDes>
+        <selectedRoute>Rimma Trade Route</selectedRoute>
+        <map>InnerRim.jpg</map>
+      </defineRoute>
     </definedRoutes>
   </hyperspaceRoutes>
   <filiations>

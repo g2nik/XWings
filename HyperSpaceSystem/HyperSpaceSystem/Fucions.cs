@@ -9,17 +9,18 @@ namespace HyperSpaceSystem
     public class Fucions
     {
         int longi = 0, lat = 0, newlat = 0, newlong=0;
+        bool major300 = false;
         public class PositionTable
         {
             public int LONG;
             public int LAT;
             public string codiRoute;
             public bool major300;
+            public string namePlanetDes;
         }
         //num1 latitud   num2 longitud
         public PositionTable getRoute(int num1,int num2)
         {
-            bool mayor300=false;
             PositionTable pst = new PositionTable();
             int contador = 0;
             int cordenadasLat = 0;
@@ -36,7 +37,6 @@ namespace HyperSpaceSystem
                 if (contador<=3)
                 {
                     cordenadasLat += item;
-                    mayor300 = true;
                 }
                 else
                 {
@@ -50,14 +50,13 @@ namespace HyperSpaceSystem
             pst.LAT = cordenadasLat;
             pst.LONG = cordenadasLong;
             pst.codiRoute = postition[cordenadasLat] + cordenadasLong;
-            pst.major300 = mayor300;
-
-
+            pst.major300 = major300;
             return pst;
         }
 
         private List<int> getList(int num1, int num2)
         {
+            major300 = false;
             List<int> lstoperation = new List<int>();
 
             lstoperation.Add(num1+num2);
@@ -70,6 +69,7 @@ namespace HyperSpaceSystem
             if ((num1*num2)>300)
             {
                 lstoperation.Clear();
+                major300 = true;
             }
             return lstoperation;
         }

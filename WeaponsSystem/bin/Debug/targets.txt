@@ -1,0 +1,15 @@
+Tie fighter|E
+Lambda shutter|E
+A-Wings|A
+W-Wings|A
+Tie Interceptor|E
+Tie fighter|E
+Lambda shutter|E
+A-Wings|A
+Tie Interceptor|E
+Tie fighter|E
+Lambda shutter|E
+Tie fighter|E
+Tie Interceptor|E
+Lambda shutter|E
+Tie fighter|E
