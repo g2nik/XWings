@@ -32,7 +32,7 @@ namespace Graella
         public string Planeta
         {
             get { return planeta; }
-            set { planeta = value; l1.Text = value; }
+            set { planeta = value; l1.Text ="    "+value; }
         }
 
         #endregion
@@ -61,9 +61,12 @@ namespace Graella
             }
             Random rnd = new Random();
             l1.ForeColor = Color.White;
-            l1.Location = new Point((int)(Math.Round((rnd.Next(1, 7) + 1) * 67.3) * 0.734) + (rnd.Next(1, 7) * 68), (int)Math.Round((rnd.Next(1, 6) * 37.5 * 0.63) + ((rnd.Next(1, 6) - 1) * 50)));
+            l1.BackColor = Color.Black;
+            l1.Font = 20;
+            Point destPoint = new Point((int)(Math.Round((rnd.Next(1, 7) + 1) * 67.3) * 0.734) + (rnd.Next(1, 7) * 68), (int)Math.Round((rnd.Next(1, 6) * 37.5 * 0.63) + ((rnd.Next(1, 6) - 1) * 50)));
+            p2.Location = destPoint;
+            l1.Location = destPoint;
             p1.Location = new Point((int)Math.Round(((let + 1) * 67.3) * 0.734) + (let * 68), (int)Math.Round((num * 37.5 * 0.63) + ((num - 1) * 50)));
-            p2.Location = new Point((int)(Math.Round((rnd.Next(1, 7) + 1) * 67.3) * 0.734) + (rnd.Next(1, 7) * 68), (int)Math.Round((rnd.Next(1, 6) * 37.5 * 0.63) + ((rnd.Next(1, 6) - 1) * 50)));
             panel18.Controls.Add(p1);
             panel18.Controls.Add(p2);
             panel18.Controls.Add(l1);

@@ -37,7 +37,7 @@ namespace HyperSpaceSystem
         private void btn_Search_Click(object sender, EventArgs e)
         {
             PlanetTable pt = new PlanetTable();
-            pstOrigen.namePlanetDes = cmb_planet.SelectedItem.ToString();
+           
             Pict_planetRoute.Image = null;
             lsb_routes.Items.Clear();
             xDoc.Load(ruta);
@@ -197,9 +197,10 @@ namespace HyperSpaceSystem
             }
 
             pstOrigen = fcn.getRoute(latORI, longORI);
+            pt.Planeta = cmb_planet.SelectedItem.ToString();
             pt.Let1 = pstOrigen.LAT;
             pt.Num1 = pstOrigen.LONG;
-            pt.Planeta = pstOrigen.namePlanetDes;
+            
             panel1.Controls.Add(pt);
         }
 

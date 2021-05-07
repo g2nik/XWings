@@ -111,7 +111,5 @@ namespace HyperSpaceSystem
             } while (b != 0);
             return mcd;
         }
-
-       
     }
 }
