@@ -75,16 +75,20 @@ namespace HyperSpaceSystem
             // 
             // lsb_routes
             // 
+            this.lsb_routes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
+            this.lsb_routes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lsb_routes.ForeColor = System.Drawing.Color.PaleGreen;
             this.lsb_routes.FormattingEnabled = true;
             this.lsb_routes.Location = new System.Drawing.Point(843, 301);
             this.lsb_routes.Name = "lsb_routes";
-            this.lsb_routes.Size = new System.Drawing.Size(180, 82);
+            this.lsb_routes.Size = new System.Drawing.Size(180, 80);
             this.lsb_routes.TabIndex = 34;
             this.lsb_routes.SelectedIndexChanged += new System.EventHandler(this.lsb_routes_SelectedIndexChanged);
             // 
             // lbl_filiation
             // 
             this.lbl_filiation.AutoSize = true;
+            this.lbl_filiation.ForeColor = System.Drawing.Color.PaleGreen;
             this.lbl_filiation.Location = new System.Drawing.Point(982, 120);
             this.lbl_filiation.Name = "lbl_filiation";
             this.lbl_filiation.Size = new System.Drawing.Size(55, 13);
@@ -94,6 +98,7 @@ namespace HyperSpaceSystem
             // lbl_filitationText
             // 
             this.lbl_filitationText.AutoSize = true;
+            this.lbl_filitationText.ForeColor = System.Drawing.Color.PaleGreen;
             this.lbl_filitationText.Location = new System.Drawing.Point(982, 100);
             this.lbl_filitationText.Name = "lbl_filitationText";
             this.lbl_filitationText.Size = new System.Drawing.Size(42, 13);
@@ -103,6 +108,7 @@ namespace HyperSpaceSystem
             // lbl_longText
             // 
             this.lbl_longText.AutoSize = true;
+            this.lbl_longText.ForeColor = System.Drawing.Color.PaleGreen;
             this.lbl_longText.Location = new System.Drawing.Point(982, 150);
             this.lbl_longText.Name = "lbl_longText";
             this.lbl_longText.Size = new System.Drawing.Size(50, 13);
@@ -112,6 +118,7 @@ namespace HyperSpaceSystem
             // lbl_long
             // 
             this.lbl_long.AutoSize = true;
+            this.lbl_long.ForeColor = System.Drawing.Color.PaleGreen;
             this.lbl_long.Location = new System.Drawing.Point(982, 170);
             this.lbl_long.Name = "lbl_long";
             this.lbl_long.Size = new System.Drawing.Size(66, 13);
@@ -121,6 +128,7 @@ namespace HyperSpaceSystem
             // lbl_routesText
             // 
             this.lbl_routesText.AutoSize = true;
+            this.lbl_routesText.ForeColor = System.Drawing.Color.PaleGreen;
             this.lbl_routesText.Location = new System.Drawing.Point(840, 275);
             this.lbl_routesText.Name = "lbl_routesText";
             this.lbl_routesText.Size = new System.Drawing.Size(41, 13);
@@ -130,6 +138,7 @@ namespace HyperSpaceSystem
             // lbl_nativesText
             // 
             this.lbl_nativesText.AutoSize = true;
+            this.lbl_nativesText.ForeColor = System.Drawing.Color.PaleGreen;
             this.lbl_nativesText.Location = new System.Drawing.Point(840, 200);
             this.lbl_nativesText.Name = "lbl_nativesText";
             this.lbl_nativesText.Size = new System.Drawing.Size(41, 13);
@@ -139,6 +148,7 @@ namespace HyperSpaceSystem
             // lbl_sector
             // 
             this.lbl_sector.AutoSize = true;
+            this.lbl_sector.ForeColor = System.Drawing.Color.PaleGreen;
             this.lbl_sector.Location = new System.Drawing.Point(840, 170);
             this.lbl_sector.Name = "lbl_sector";
             this.lbl_sector.Size = new System.Drawing.Size(52, 13);
@@ -148,6 +158,7 @@ namespace HyperSpaceSystem
             // lbl_sectorText
             // 
             this.lbl_sectorText.AutoSize = true;
+            this.lbl_sectorText.ForeColor = System.Drawing.Color.PaleGreen;
             this.lbl_sectorText.Location = new System.Drawing.Point(840, 150);
             this.lbl_sectorText.Name = "lbl_sectorText";
             this.lbl_sectorText.Size = new System.Drawing.Size(36, 13);
@@ -157,6 +168,7 @@ namespace HyperSpaceSystem
             // lbl_latText
             // 
             this.lbl_latText.AutoSize = true;
+            this.lbl_latText.ForeColor = System.Drawing.Color.PaleGreen;
             this.lbl_latText.Location = new System.Drawing.Point(982, 200);
             this.lbl_latText.Name = "lbl_latText";
             this.lbl_latText.Size = new System.Drawing.Size(41, 13);
@@ -166,6 +178,7 @@ namespace HyperSpaceSystem
             // lbl_lat
             // 
             this.lbl_lat.AutoSize = true;
+            this.lbl_lat.ForeColor = System.Drawing.Color.PaleGreen;
             this.lbl_lat.Location = new System.Drawing.Point(982, 220);
             this.lbl_lat.Name = "lbl_lat";
             this.lbl_lat.Size = new System.Drawing.Size(57, 13);
@@ -175,6 +188,7 @@ namespace HyperSpaceSystem
             // lbl_natives
             // 
             this.lbl_natives.AutoSize = true;
+            this.lbl_natives.ForeColor = System.Drawing.Color.PaleGreen;
             this.lbl_natives.Location = new System.Drawing.Point(840, 220);
             this.lbl_natives.Name = "lbl_natives";
             this.lbl_natives.Size = new System.Drawing.Size(57, 13);
@@ -184,6 +198,7 @@ namespace HyperSpaceSystem
             // lbl_planet
             // 
             this.lbl_planet.AutoSize = true;
+            this.lbl_planet.ForeColor = System.Drawing.Color.PaleGreen;
             this.lbl_planet.Location = new System.Drawing.Point(840, 120);
             this.lbl_planet.Name = "lbl_planet";
             this.lbl_planet.Size = new System.Drawing.Size(52, 13);
@@ -193,6 +208,7 @@ namespace HyperSpaceSystem
             // lbl_planetText
             // 
             this.lbl_planetText.AutoSize = true;
+            this.lbl_planetText.ForeColor = System.Drawing.Color.PaleGreen;
             this.lbl_planetText.Location = new System.Drawing.Point(840, 100);
             this.lbl_planetText.Name = "lbl_planetText";
             this.lbl_planetText.Size = new System.Drawing.Size(36, 13);
@@ -201,6 +217,8 @@ namespace HyperSpaceSystem
             // 
             // btn_Search
             // 
+            this.btn_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Search.ForeColor = System.Drawing.Color.PaleGreen;
             this.btn_Search.Location = new System.Drawing.Point(1162, 43);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.Size = new System.Drawing.Size(75, 23);
@@ -211,6 +229,9 @@ namespace HyperSpaceSystem
             // 
             // cmb_planet
             // 
+            this.cmb_planet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
+            this.cmb_planet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmb_planet.ForeColor = System.Drawing.Color.PaleGreen;
             this.cmb_planet.FormattingEnabled = true;
             this.cmb_planet.Location = new System.Drawing.Point(1002, 45);
             this.cmb_planet.Name = "cmb_planet";
@@ -219,6 +240,9 @@ namespace HyperSpaceSystem
             // 
             // cmb_category
             // 
+            this.cmb_category.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
+            this.cmb_category.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmb_category.ForeColor = System.Drawing.Color.PaleGreen;
             this.cmb_category.FormattingEnabled = true;
             this.cmb_category.Location = new System.Drawing.Point(843, 45);
             this.cmb_category.Name = "cmb_category";
@@ -228,6 +252,9 @@ namespace HyperSpaceSystem
             // 
             // cmb_position
             // 
+            this.cmb_position.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
+            this.cmb_position.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmb_position.ForeColor = System.Drawing.Color.PaleGreen;
             this.cmb_position.FormattingEnabled = true;
             this.cmb_position.Location = new System.Drawing.Point(514, 53);
             this.cmb_position.Name = "cmb_position";
@@ -252,6 +279,8 @@ namespace HyperSpaceSystem
             // 
             // btn_save
             // 
+            this.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_save.ForeColor = System.Drawing.Color.PaleGreen;
             this.btn_save.Location = new System.Drawing.Point(106, 238);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(165, 23);
@@ -271,6 +300,8 @@ namespace HyperSpaceSystem
             // 
             // button1
             // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.PaleGreen;
             this.button1.Location = new System.Drawing.Point(296, 179);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
@@ -282,6 +313,7 @@ namespace HyperSpaceSystem
             // lbl_orDes
             // 
             this.lbl_orDes.AutoSize = true;
+            this.lbl_orDes.ForeColor = System.Drawing.Color.PaleGreen;
             this.lbl_orDes.Location = new System.Drawing.Point(141, 129);
             this.lbl_orDes.Name = "lbl_orDes";
             this.lbl_orDes.Size = new System.Drawing.Size(35, 13);
@@ -291,6 +323,7 @@ namespace HyperSpaceSystem
             // lbl_Route
             // 
             this.lbl_Route.AutoSize = true;
+            this.lbl_Route.ForeColor = System.Drawing.Color.PaleGreen;
             this.lbl_Route.Location = new System.Drawing.Point(141, 156);
             this.lbl_Route.Name = "lbl_Route";
             this.lbl_Route.Size = new System.Drawing.Size(36, 13);
@@ -300,6 +333,7 @@ namespace HyperSpaceSystem
             // lbl_Image
             // 
             this.lbl_Image.AutoSize = true;
+            this.lbl_Image.ForeColor = System.Drawing.Color.PaleGreen;
             this.lbl_Image.Location = new System.Drawing.Point(141, 184);
             this.lbl_Image.Name = "lbl_Image";
             this.lbl_Image.Size = new System.Drawing.Size(69, 13);
@@ -309,6 +343,7 @@ namespace HyperSpaceSystem
             // lbl_Map_text
             // 
             this.lbl_Map_text.AutoSize = true;
+            this.lbl_Map_text.ForeColor = System.Drawing.Color.PaleGreen;
             this.lbl_Map_text.Location = new System.Drawing.Point(21, 184);
             this.lbl_Map_text.Name = "lbl_Map_text";
             this.lbl_Map_text.Size = new System.Drawing.Size(28, 13);
@@ -318,6 +353,7 @@ namespace HyperSpaceSystem
             // lbl_SelectedRoute_text
             // 
             this.lbl_SelectedRoute_text.AutoSize = true;
+            this.lbl_SelectedRoute_text.ForeColor = System.Drawing.Color.PaleGreen;
             this.lbl_SelectedRoute_text.Location = new System.Drawing.Point(21, 156);
             this.lbl_SelectedRoute_text.Name = "lbl_SelectedRoute_text";
             this.lbl_SelectedRoute_text.Size = new System.Drawing.Size(81, 13);
@@ -327,6 +363,7 @@ namespace HyperSpaceSystem
             // lbl_Order_Text
             // 
             this.lbl_Order_Text.AutoSize = true;
+            this.lbl_Order_Text.ForeColor = System.Drawing.Color.PaleGreen;
             this.lbl_Order_Text.Location = new System.Drawing.Point(21, 129);
             this.lbl_Order_Text.Name = "lbl_Order_Text";
             this.lbl_Order_Text.Size = new System.Drawing.Size(33, 13);
@@ -346,7 +383,8 @@ namespace HyperSpaceSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1686, 821);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.cmb_position);
             this.Controls.Add(this.pictureBox1);
@@ -370,6 +408,7 @@ namespace HyperSpaceSystem
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);

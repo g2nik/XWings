@@ -17,25 +17,43 @@ namespace Critical_System
     public partial class Form1 : Form
     {
         string[] llibres = new string[5] { "http://www.gutenberg.org/files/120/120-0.txt", "http://www.gutenberg.org/cache/epub/57303/pg57303.txt", "http://www.gutenberg.org/cache/epub/1228/pg1228.txt", "http://www.gutenberg.org/cache/epub/2000/pg2000.txt", "http://www.gutenberg.org/files/1524/1524-0.txt" };
-        Thread hilo1;
         ProgressBar[] progressBars;
         BibliotecaXWigns.HelperMethods hlp = new BibliotecaXWigns.HelperMethods();
 
         public Form1()
         {
-        InitializeComponent();
+            InitializeComponent();
             progressBars = new ProgressBar[5] { pgb_armament, pgb_motor, pgb_generador, pgb_refector, pgb_sensor };
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            hilo1 = new Thread(new ThreadStart(startProcess));
+            for (int i = 0; i < progressBars.Length; i++)
+            {
+                 progressBars[i].Value = 0;
+            }
+            blocButton();
+            Thread hilo1 = new Thread(new ThreadStart(startProcess));
             hilo1.Start();
+        }
+
+        private void blocButton()
+        {
+            for (int i = 0; i < progressBars.Length; i++)
+            {
+                if (InvokeRequired)
+                {
+                    progressBars[i].Invoke(new MethodInvoker(delegate ()
+                    {
+                        progressBars[i].Value = 0;
+                    }));
+                }
+            }
+            button1.Enabled = false;
         }
 
         private void startProcess()
         {
-
             Parallel.For(0, llibres.Length, (i, state) =>
             {
                 String direction = "";
@@ -50,6 +68,7 @@ namespace Critical_System
                 }
             });
         }
+
         private void dotChecks(string llibre, ProgressBar pgb)
         {
             string[] words = llibre.Split(' ');
@@ -95,10 +114,19 @@ namespace Critical_System
                 updateProgressbar(pgb);
             }
             );
+            enableButton();
         }
-
-
-       
+         
+        private void enableButton()
+        {
+            if (InvokeRequired)
+            {
+                button1.Invoke(new MethodInvoker(delegate ()
+                {
+                    button1.Enabled = true;
+                }));
+            }
+        }
 
         private void updateProgressbar(ProgressBar pgb)
         {

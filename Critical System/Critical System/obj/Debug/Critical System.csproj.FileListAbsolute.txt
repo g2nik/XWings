@@ -1,26 +1,13 @@
 C:\Users\Mario\Desktop\Github\G2Team\XWings\Critical System\Critical System\bin\Debug\Critical System.exe.config
 C:\Users\Mario\Desktop\Github\G2Team\XWings\Critical System\Critical System\bin\Debug\Critical System.exe
 C:\Users\Mario\Desktop\Github\G2Team\XWings\Critical System\Critical System\bin\Debug\Critical System.pdb
+C:\Users\Mario\Desktop\Github\G2Team\XWings\Critical System\Critical System\bin\Debug\BibliotecaXWigns.dll
+C:\Users\Mario\Desktop\Github\G2Team\XWings\Critical System\Critical System\bin\Debug\BibliotecaXWigns.pdb
 C:\Users\Mario\Desktop\Github\G2Team\XWings\Critical System\Critical System\obj\Debug\Critical System.csprojAssemblyReference.cache
 C:\Users\Mario\Desktop\Github\G2Team\XWings\Critical System\Critical System\obj\Debug\Critical_System.Form1.resources
 C:\Users\Mario\Desktop\Github\G2Team\XWings\Critical System\Critical System\obj\Debug\Critical_System.Properties.Resources.resources
 C:\Users\Mario\Desktop\Github\G2Team\XWings\Critical System\Critical System\obj\Debug\Critical System.csproj.GenerateResource.cache
 C:\Users\Mario\Desktop\Github\G2Team\XWings\Critical System\Critical System\obj\Debug\Critical System.csproj.CoreCompileInputs.cache
+C:\Users\Mario\Desktop\Github\G2Team\XWings\Critical System\Critical System\obj\Debug\Critical System.csproj.CopyComplete
 C:\Users\Mario\Desktop\Github\G2Team\XWings\Critical System\Critical System\obj\Debug\Critical System.exe
 C:\Users\Mario\Desktop\Github\G2Team\XWings\Critical System\Critical System\obj\Debug\Critical System.pdb
-C:\Users\Mario\Desktop\Github\G2Team\XWings\Critical System\Critical System\bin\Debug\BibliotecaXWigns.dll
-C:\Users\Mario\Desktop\Github\G2Team\XWings\Critical System\Critical System\bin\Debug\BibliotecaXWigns.pdb
-C:\Users\Mario\Desktop\Github\G2Team\XWings\Critical System\Critical System\obj\Debug\Critical System.csproj.CopyComplete
-C:\Users\Snake\Documents\GitHub\XWings\Critical System\Critical System\bin\Debug\Critical System.exe.config
-C:\Users\Snake\Documents\GitHub\XWings\Critical System\Critical System\bin\Debug\Critical System.exe
-C:\Users\Snake\Documents\GitHub\XWings\Critical System\Critical System\bin\Debug\Critical System.pdb
-C:\Users\Snake\Documents\GitHub\XWings\Critical System\Critical System\bin\Debug\BibliotecaXWigns.dll
-C:\Users\Snake\Documents\GitHub\XWings\Critical System\Critical System\bin\Debug\BibliotecaXWigns.pdb
-C:\Users\Snake\Documents\GitHub\XWings\Critical System\Critical System\obj\Debug\Critical System.csprojAssemblyReference.cache
-C:\Users\Snake\Documents\GitHub\XWings\Critical System\Critical System\obj\Debug\Critical_System.Form1.resources
-C:\Users\Snake\Documents\GitHub\XWings\Critical System\Critical System\obj\Debug\Critical_System.Properties.Resources.resources
-C:\Users\Snake\Documents\GitHub\XWings\Critical System\Critical System\obj\Debug\Critical System.csproj.GenerateResource.cache
-C:\Users\Snake\Documents\GitHub\XWings\Critical System\Critical System\obj\Debug\Critical System.csproj.CoreCompileInputs.cache
-C:\Users\Snake\Documents\GitHub\XWings\Critical System\Critical System\obj\Debug\Critical System.csproj.CopyComplete
-C:\Users\Snake\Documents\GitHub\XWings\Critical System\Critical System\obj\Debug\Critical System.exe
-C:\Users\Snake\Documents\GitHub\XWings\Critical System\Critical System\obj\Debug\Critical System.pdb
