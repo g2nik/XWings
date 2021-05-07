@@ -37,3 +37,6 @@ C:\Users\Mario\Desktop\Github\G2Team\XWings\HyperSpaceSystem\HyperSpaceSystem\Ej
 C:\Users\Mario\Desktop\Github\G2Team\XWings\HyperSpaceSystem\HyperSpaceSystem\Ejecutables\Graella.pdb
 C:\Users\Mario\Desktop\Github\G2Team\XWings\HyperSpaceSystem\HyperSpaceSystem\obj\Debug\HyperSpaceSystem.csproj.CopyComplete
 C:\Users\Mario\Desktop\Github\G2Team\XWings\HyperSpaceSystem\HyperSpaceSystem\obj\Debug\HyperSpaceSystem.csprojAssemblyReference.cache
+C:\Users\Snake\Documents\GitHub\XWings\HyperSpaceSystem\HyperSpaceSystem\Ejecutables\Graella.dll
+C:\Users\Snake\Documents\GitHub\XWings\HyperSpaceSystem\HyperSpaceSystem\Ejecutables\Graella.pdb
+C:\Users\Snake\Documents\GitHub\XWings\HyperSpaceSystem\HyperSpaceSystem\obj\Debug\HyperSpaceSystem.csproj.CopyComplete
