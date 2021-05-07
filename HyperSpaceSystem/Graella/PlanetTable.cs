@@ -62,7 +62,6 @@ namespace Graella
             Random rnd = new Random();
             l1.ForeColor = Color.White;
             l1.BackColor = Color.Black;
-            l1.Font = 20;
             Point destPoint = new Point((int)(Math.Round((rnd.Next(1, 7) + 1) * 67.3) * 0.734) + (rnd.Next(1, 7) * 68), (int)Math.Round((rnd.Next(1, 6) * 37.5 * 0.63) + ((rnd.Next(1, 6) - 1) * 50)));
             p2.Location = destPoint;
             l1.Location = destPoint;

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HyperSpaceSystem", "HyperSp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graella", "Graella\Graella.csproj", "{9815F17D-7C8F-47C0-B9C3-844C67817C4D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTesting", "UnitTesting\UnitTesting.csproj", "{EA233BFE-37FD-4B84-934B-61779C9C6EB0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9815F17D-7C8F-47C0-B9C3-844C67817C4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9815F17D-7C8F-47C0-B9C3-844C67817C4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9815F17D-7C8F-47C0-B9C3-844C67817C4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA233BFE-37FD-4B84-934B-61779C9C6EB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA233BFE-37FD-4B84-934B-61779C9C6EB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA233BFE-37FD-4B84-934B-61779C9C6EB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA233BFE-37FD-4B84-934B-61779C9C6EB0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -27,9 +27,11 @@ namespace HyperSpaceSystem
             int cordenadasLong = 0;
             string[] postition = new string[6] {"A","B","C","D","E","F"};
             List<int> lst = new List<int>();
-            getVectorHyperSpace(num1, num2);
-            newlat = getMCM(lat, longi );
-            newlong = getMCD(lat, longi);
+            int[] latLong = new int[2];
+            
+           latLong=  getVectorHyperSpace(num1, num2);
+            newlat = getMCM(latLong[1], latLong[0]);
+            newlong = getMCD(latLong[1], latLong[0]);
             lst = getList(newlat, newlong);
 
             foreach (int item in lst)
@@ -54,7 +56,7 @@ namespace HyperSpaceSystem
             return pst;
         }
 
-        private List<int> getList(int num1, int num2)
+        public List<int> getList(int num1, int num2)
         {
             major300 = false;
             List<int> lstoperation = new List<int>();
@@ -74,9 +76,11 @@ namespace HyperSpaceSystem
             return lstoperation;
         }
 
-        public void getVectorHyperSpace(int num1,int num2 )
+        public int[] getVectorHyperSpace(int num1,int num2 )
         {
             int[] aDividir = new int[6] { 13, 11, 7, 5, 3, 2 };
+            int[] latLon = new int[2];
+
             int residuoLong = 0;
             int residuoLat = 0;
 
@@ -85,8 +89,10 @@ namespace HyperSpaceSystem
                 residuoLong = residuoLong + (num2 % item);
                 residuoLat = residuoLat + (num1 % item);
             }
-            longi = residuoLong;
-            lat = residuoLat;
+
+            latLon[0]= residuoLong;
+            latLon[1] = residuoLat;
+            return latLon;
         }
 
         public int getMCM(int numero1, int numero2)

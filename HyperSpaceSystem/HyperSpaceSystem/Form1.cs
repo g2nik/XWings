@@ -25,6 +25,7 @@ namespace HyperSpaceSystem
         {
             InitializeComponent();
         }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             xDoc.Load(ruta);
@@ -37,22 +38,39 @@ namespace HyperSpaceSystem
         private void btn_Search_Click(object sender, EventArgs e)
         {
             PlanetTable pt = new PlanetTable();
-           
-            Pict_planetRoute.Image = null;
-            lsb_routes.Items.Clear();
-            xDoc.Load(ruta);
             XmlNodeList planetList = xDoc.GetElementsByTagName("planet");
-            getLongLatOrigenPlanet();
-            showDataPlanetSelectedDest();
-            getTableRoute(pt);
 
-            if (pstOrigen.major300)
+            try
             {
-                deleteTableRoute(pt);
-                lsb_routes.Items.Clear();
-                MessageBox.Show("No es troba ruta segura");
+                
+                if (cmb_position.SelectedItem.ToString() != " " && cmb_planet.SelectedItem.ToString() != " ")
+                {
+                    Pict_planetRoute.Image = null;
+                    lsb_routes.Items.Clear();
+                    xDoc.Load(ruta);
+
+                    getLongLatOrigenPlanet();
+                    showDataPlanetSelectedDest();
+                    getTableRoute(pt);
+
+                    if (pstOrigen.major300)
+                    {
+                        deleteTableRoute(pt);
+                        lsb_routes.Items.Clear();
+                        MessageBox.Show("No es troba ruta segura");
+                    }
+                    clearForm1();
+                }
+                else
+                {
+                    MessageBox.Show("Tiene que selecionar un planeta de origen y otro de destino");
+                }   
             }
-            clearForm1();
+            catch (Exception x )
+            {
+                MessageBox.Show(x.Message);
+            }
+            
         }
 
         private void clearForm1()
@@ -132,8 +150,6 @@ namespace HyperSpaceSystem
         {
             string categorySelected = cmb_category.SelectedItem.ToString();
             cmb_planet.Items.Clear();
-            cmb_planet.Items.Add(" ");
-            cmb_planet.SelectedItem = " ";
             getValues(categorySelected);
         }
         #endregion
@@ -161,7 +177,6 @@ namespace HyperSpaceSystem
 
         private void getNodes()
         {
-            //xDoc.Load(ruta);
             XmlNode root = xDoc.DocumentElement;
             cmb_category.Items.Add(" ");
             cmb_category.SelectedItem = " ";
@@ -174,6 +189,11 @@ namespace HyperSpaceSystem
         private void getplanets()
         {
             XmlNodeList planetsList = xDoc.GetElementsByTagName("name");
+            cmb_planet.Items.Add(" ");
+            cmb_position.Items.Add(" ");
+            cmb_planet.SelectedItem = " ";
+            cmb_position.SelectedItem = " ";
+
             foreach (XmlNode planet in planetsList)
             {
                 cmb_planet.Items.Add(planet.InnerText);
@@ -207,6 +227,7 @@ namespace HyperSpaceSystem
         private void getLongLatOrigenPlanet()
         {
             string selectedPlanet = cmb_position.SelectedItem.ToString();
+
             XmlNodeList selectedPlanetChilds = xDoc.SelectNodes("/hyperSpacedata/planets/planet[name=\"" + selectedPlanet + "\"]/*");
             List<string> selectedPlanetData = new List<string>();
 
