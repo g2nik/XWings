@@ -19,7 +19,7 @@ namespace Critical_System
         string[] llibres = new string[5] { "http://www.gutenberg.org/files/120/120-0.txt", "http://www.gutenberg.org/cache/epub/57303/pg57303.txt", "http://www.gutenberg.org/cache/epub/1228/pg1228.txt", "http://www.gutenberg.org/cache/epub/2000/pg2000.txt", "http://www.gutenberg.org/files/1524/1524-0.txt" };
         ProgressBar[] progressBars;
         BibliotecaXWigns.HelperMethods hlp = new BibliotecaXWigns.HelperMethods();
-
+        //HOla Este comentario simula la modificaion de codigo que podamos llegar a realizar
         public Form1()
         {
             InitializeComponent();
