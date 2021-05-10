@@ -40,6 +40,7 @@ namespace Critical_System
             this.pgb_generador = new System.Windows.Forms.ProgressBar();
             this.pgb_refector = new System.Windows.Forms.ProgressBar();
             this.button1 = new System.Windows.Forms.Button();
+            this.lbl_download = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -144,12 +145,23 @@ namespace Critical_System
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // lbl_download
+            // 
+            this.lbl_download.AutoSize = true;
+            this.lbl_download.ForeColor = System.Drawing.Color.PaleGreen;
+            this.lbl_download.Location = new System.Drawing.Point(195, 176);
+            this.lbl_download.Name = "lbl_download";
+            this.lbl_download.Size = new System.Drawing.Size(35, 13);
+            this.lbl_download.TabIndex = 11;
+            this.lbl_download.Text = "label6";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(530, 301);
+            this.Controls.Add(this.lbl_download);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pgb_refector);
             this.Controls.Add(this.pgb_generador);
@@ -163,6 +175,7 @@ namespace Critical_System
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,6 +194,7 @@ namespace Critical_System
         private System.Windows.Forms.ProgressBar pgb_generador;
         private System.Windows.Forms.ProgressBar pgb_refector;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lbl_download;
     }
 }
 
