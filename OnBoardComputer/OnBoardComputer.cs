@@ -21,7 +21,7 @@ namespace OnBoardComputer
         {
             InitializeComponent();
         }
-
+        //hola soy un comentario realizado para la documentacion de github desktop
         private void OnBoardComputer_Load(object sender, EventArgs e)
         {
             info = XDocument.Load(@"DataBank.xml");
