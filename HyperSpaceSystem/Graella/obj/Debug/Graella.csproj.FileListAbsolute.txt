@@ -15,3 +15,4 @@ C:\Users\Mario\Desktop\Github\G2Team\XWings\HyperSpaceSystem\Graella\obj\Debug\G
 C:\Users\Mario\Desktop\Github\G2Team\XWings\HyperSpaceSystem\Graella\obj\Debug\Graella.csproj.CoreCompileInputs.cache
 C:\Users\Mario\Desktop\Github\G2Team\XWings\HyperSpaceSystem\Graella\obj\Debug\Graella.dll
 C:\Users\Mario\Desktop\Github\G2Team\XWings\HyperSpaceSystem\Graella\obj\Debug\Graella.pdb
+C:\Users\Mario\Desktop\Github\G2Team\XWings\HyperSpaceSystem\Graella\obj\Debug\Graella.csprojAssemblyReference.cache

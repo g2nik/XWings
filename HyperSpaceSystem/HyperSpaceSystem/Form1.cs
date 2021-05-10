@@ -31,7 +31,8 @@ namespace HyperSpaceSystem
             xDoc.Load(ruta);
             cleanTextbox();
             getNodes();
-            getplanets();
+            getplanets(); 
+            comboBox1.Visible = false;
         }
 
         #region Buttons
@@ -42,7 +43,6 @@ namespace HyperSpaceSystem
 
             try
             {
-                
                 if (cmb_position.SelectedItem.ToString() != " " && cmb_planet.SelectedItem.ToString() != " ")
                 {
                     Pict_planetRoute.Image = null;
@@ -145,10 +145,29 @@ namespace HyperSpaceSystem
                 lbl_Route.Text = lsb_routes.SelectedItem.ToString();
             }
         }
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            XmlNodeList selectedPlanetChilds = xDoc.SelectNodes("/hyperSpacedata/planets/planet[filiation=\"" + comboBox1.SelectedItem.ToString() + "\"]/*");
+
+            foreach (XmlNode node in selectedPlanetChilds)
+            {
+                cmb_planet.Items.Add(node["name"].InnerText);
+            }
+        }
 
         private void cmb_category_SelectedIndexChanged(object sender, EventArgs e)
         {
             string categorySelected = cmb_category.SelectedItem.ToString();
+            if (categorySelected == "planets")
+            {
+                comboBox1.Visible = false;
+
+            }
+            else
+            {
+                comboBox1.Visible = true;
+
+            }
             cmb_planet.Items.Clear();
             getValues(categorySelected);
         }
@@ -259,44 +278,56 @@ namespace HyperSpaceSystem
         {
             if (category == "filiations")
             {
-                getFiliation();
+                getFiliation(comboBox1);
             }
             else if (category == "regions")
             {
-                getRegions();
+                getRegions(comboBox1);
             }
             else if (category == "planets")
             {
                 getPlanets();
             }
         }
-
-        private void getFiliation()
-        {
-            XmlNodeList filiationsList = xDoc.GetElementsByTagName("description");
-            foreach (XmlNode filiation in filiationsList)
-            {
-                cmb_planet.Items.Add(filiation.InnerText);
-            }
-        }
-
-        private void getRegions()
-        {
-            XmlNodeList regionsList = xDoc.GetElementsByTagName("nameRegion");
-            foreach (XmlNode region in regionsList)
-            {
-                cmb_planet.Items.Add(region.InnerText.Replace("-", ""));
-            }
-        }
-
         private void getPlanets()
         {
             XmlNodeList planetsList = xDoc.GetElementsByTagName("name");
+            
             foreach (XmlNode planet in planetsList)
             {
                 cmb_planet.Items.Add(planet.InnerText);
             }
         }
+        private void getFiliation(ComboBox cmb)
+        {
+            XmlNodeList filiationsList = xDoc.GetElementsByTagName("description");
+            foreach (XmlNode filiation in filiationsList)
+            {
+                cmb.Items.Add(filiation.InnerText);
+            }
+        }
+        
+        private void getPlanetByRegion()
+        {
+            XmlNodeList planetsList = xDoc.GetElementsByTagName("name");
+
+            foreach (XmlNode planet in planetsList)
+            {
+                cmb_planet.Items.Add(planet.InnerText);
+            }
+        }
+
+        private void getRegions(ComboBox cmb)
+        {
+            XmlNodeList regionsList = xDoc.GetElementsByTagName("nameRegion");
+            foreach (XmlNode region in regionsList)
+            {
+                cmb.Items.Add(region.InnerText.Replace("-", ""));
+            }
+            getPlanetByRegion();
+        }
+
+       
         #endregion
 
         #region Show Data
@@ -329,6 +360,7 @@ namespace HyperSpaceSystem
                 getMayorMinor(item.InnerText, routes.Count);
             }
         }
+
         private void writeLbl(XmlNodeList selectedPlanetChilds, List<string> selectedPlanetData)
         {
             lbl_filitationText.Text = "Filiation";
@@ -345,7 +377,6 @@ namespace HyperSpaceSystem
             lbl_natives.Text = selectedPlanetData[5];
             lbl_planet.Text = cmb_planet.SelectedItem.ToString();
         }
-
         #endregion
     }
 }

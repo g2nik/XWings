@@ -59,6 +59,7 @@ namespace HyperSpaceSystem
             this.lbl_SelectedRoute_text = new System.Windows.Forms.Label();
             this.lbl_Order_Text = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pict_planetRoute)).BeginInit();
@@ -244,7 +245,7 @@ namespace HyperSpaceSystem
             this.cmb_category.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmb_category.ForeColor = System.Drawing.Color.PaleGreen;
             this.cmb_category.FormattingEnabled = true;
-            this.cmb_category.Location = new System.Drawing.Point(843, 45);
+            this.cmb_category.Location = new System.Drawing.Point(719, 45);
             this.cmb_category.Name = "cmb_category";
             this.cmb_category.Size = new System.Drawing.Size(121, 21);
             this.cmb_category.TabIndex = 18;
@@ -256,7 +257,7 @@ namespace HyperSpaceSystem
             this.cmb_position.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmb_position.ForeColor = System.Drawing.Color.PaleGreen;
             this.cmb_position.FormattingEnabled = true;
-            this.cmb_position.Location = new System.Drawing.Point(514, 53);
+            this.cmb_position.Location = new System.Drawing.Point(513, 45);
             this.cmb_position.Name = "cmb_position";
             this.cmb_position.Size = new System.Drawing.Size(121, 21);
             this.cmb_position.TabIndex = 36;
@@ -379,12 +380,25 @@ namespace HyperSpaceSystem
             this.panel1.Size = new System.Drawing.Size(765, 428);
             this.panel1.TabIndex = 38;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.ForeColor = System.Drawing.Color.PaleGreen;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(867, 45);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 40;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.cmb_position);
             this.Controls.Add(this.pictureBox1);
@@ -451,6 +465,7 @@ namespace HyperSpaceSystem
         private System.Windows.Forms.PictureBox Pict_planetRoute;
         private System.Windows.Forms.Button btn_save;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
