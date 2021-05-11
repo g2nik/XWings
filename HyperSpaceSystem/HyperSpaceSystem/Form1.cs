@@ -240,7 +240,7 @@ namespace HyperSpaceSystem
 
             foreach (XmlNode planet in planetsList)
             {
-               // cmb_planet.Items.Add(planet.InnerText);
+                cmb_planet.Items.Add(planet.InnerText);
                 cmb_position.Items.Add(planet.InnerText);
             }
         }
@@ -264,14 +264,12 @@ namespace HyperSpaceSystem
             pt.Planeta = cmb_planet.SelectedItem.ToString();
             pt.Let1 = pstOrigen.LAT;
             pt.Num1 = pstOrigen.LONG;
-            
             panel1.Controls.Add(pt);
         }
 
         private void getLongLatOrigenPlanet()
         {
             string selectedPlanet = cmb_position.SelectedItem.ToString();
-
             XmlNodeList selectedPlanetChilds = xDoc.SelectNodes("/hyperSpacedata/planets/planet[name=\"" + selectedPlanet + "\"]/*");
             List<string> selectedPlanetData = new List<string>();
 
@@ -314,6 +312,7 @@ namespace HyperSpaceSystem
                 getPlanets();
             }
         }
+
         private void getPlanets()
         {
             XmlNodeList planetsList = xDoc.GetElementsByTagName("name");
@@ -323,6 +322,7 @@ namespace HyperSpaceSystem
                 cmb_planet.Items.Add(planet.InnerText);
             }
         }
+
         private void getFiliation(ComboBox cmb)
         {
             XmlNodeList filiationsList = xDoc.GetElementsByTagName("description");
@@ -356,18 +356,19 @@ namespace HyperSpaceSystem
         #region Show Data
         private void showDataPlanetSelectedDest()
         {
-            string selectedPlanet = cmb_planet.SelectedItem.ToString();
+            string selectedPlanet = cmb_planet.SelectedItem.ToString();            
+            string imagePath = Application.StartupPath + "\\Recursos\\planetes\\" + selectedPlanet + ".png";
+            XmlNodeList selectedPlanetChilds = xDoc.SelectNodes("/hyperSpacedata/planets/planet[name=\"" + selectedPlanet + "\"]/*");
+            List<string> selectedPlanetData = new List<string>();
+            
             lsb_routes.Visible = true;
             lsb_routes.Items.Clear();
 
-            XmlNodeList selectedPlanetChilds = xDoc.SelectNodes("/hyperSpacedata/planets/planet[name=\"" + selectedPlanet + "\"]/*");
-            List<string> selectedPlanetData = new List<string>();
             foreach (XmlNode node in selectedPlanetChilds)
             {
                 selectedPlanetData.Add(node.InnerText);
             }
 
-            string imagePath = Application.StartupPath + "\\Recursos\\planetes\\" + selectedPlanet + ".png";
             if (!File.Exists(@imagePath))
             {
                 imagePath = imagePath.Replace(".png", ".jpg");
@@ -386,12 +387,7 @@ namespace HyperSpaceSystem
 
         private void writeLbl(XmlNodeList selectedPlanetChilds, List<string> selectedPlanetData)
         {
-            lbl_filitationText.Text = "Filiation";
-            lbl_latText.Text = "Latitude";
-            lbl_longText.Text = "Longitude";
-            lbl_nativesText.Text = "Natives";
-            lbl_planetText.Text = "Planet";
-            lbl_sectorText.Text = "Sector";
+            setText()
 
             lbl_sector.Text = selectedPlanetData[1];
             lbl_filiation.Text = selectedPlanetData[2]; ;
@@ -399,6 +395,15 @@ namespace HyperSpaceSystem
             lbl_long.Text = selectedPlanetChilds[3].SelectSingleNode("long").InnerText;
             lbl_natives.Text = selectedPlanetData[5];
             lbl_planet.Text = cmb_planet.SelectedItem.ToString();
+        }
+        private void setText()
+        {
+            lbl_filitationText.Text = "Filiation";
+            lbl_latText.Text = "Latitude";
+            lbl_longText.Text = "Longitude";
+            lbl_nativesText.Text = "Natives";
+            lbl_planetText.Text = "Planet";
+            lbl_sectorText.Text = "Sector";
         }
         #endregion
     }
