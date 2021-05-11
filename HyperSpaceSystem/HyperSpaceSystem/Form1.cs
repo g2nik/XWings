@@ -33,6 +33,9 @@ namespace HyperSpaceSystem
             getNodes();
             getplanets(); 
             comboBox1.Visible = false;
+            panel2.Visible = false;
+
+            cmb_category.Items.Remove("hyperspaceRoutes");
         }
 
         #region Buttons
@@ -40,7 +43,7 @@ namespace HyperSpaceSystem
         {
             PlanetTable pt = new PlanetTable();
             XmlNodeList planetList = xDoc.GetElementsByTagName("planet");
-
+            panel2.Visible = true;
             try
             {
                 if (cmb_position.SelectedItem.ToString() != " " && cmb_planet.SelectedItem.ToString() != " ")
@@ -147,11 +150,30 @@ namespace HyperSpaceSystem
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            XmlNodeList selectedPlanetChilds = xDoc.SelectNodes("/hyperSpacedata/planets/planet[filiation=\"" + comboBox1.SelectedItem.ToString() + "\"]/*");
-
-            foreach (XmlNode node in selectedPlanetChilds)
+            cmb_planet.Items.Clear();
+            cmb_planet.Items.Add(" ");
+            cmb_planet.SelectedItem = " ";
+            if (cmb_category.SelectedItem.ToString() == "filiations")
             {
-                cmb_planet.Items.Add(node["name"].InnerText);
+                XmlNodeList selectedPlanetChilds = xDoc.SelectNodes("/hyperSpacedata/planets/planet[filiation=\"" + comboBox1.SelectedItem.ToString() + "\"]/*");
+                foreach (XmlNode node in selectedPlanetChilds)
+                {
+                    if (node.LocalName == "name")
+                    {
+                        cmb_planet.Items.Add(node.InnerText);
+                    }
+                }
+            }
+            else
+            {
+                XmlNodeList selectedPlanetChilds = xDoc.SelectNodes($"/hyperSpacedata/planets/planet[contains(sector,'{comboBox1.SelectedItem.ToString()}')]/*");
+                foreach (XmlNode node in selectedPlanetChilds)
+                {
+                    if (node.LocalName == "name")
+                    {
+                        cmb_planet.Items.Add(node.InnerText);
+                    }
+                }
             }
         }
 
@@ -169,6 +191,9 @@ namespace HyperSpaceSystem
 
             }
             cmb_planet.Items.Clear();
+            comboBox1.Items.Clear();
+            comboBox1.Items.Add(" ");
+            comboBox1.SelectedItem = " ";
             getValues(categorySelected);
         }
         #endregion
@@ -215,7 +240,7 @@ namespace HyperSpaceSystem
 
             foreach (XmlNode planet in planetsList)
             {
-                cmb_planet.Items.Add(planet.InnerText);
+               // cmb_planet.Items.Add(planet.InnerText);
                 cmb_position.Items.Add(planet.InnerText);
             }
         }
@@ -326,8 +351,6 @@ namespace HyperSpaceSystem
             }
             getPlanetByRegion();
         }
-
-       
         #endregion
 
         #region Show Data
