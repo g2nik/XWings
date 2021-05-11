@@ -70,8 +70,7 @@ namespace OnBoardComputer
                 if (cmbCategoria.SelectedItem.ToString() != "")
                 {
                     arbol.Nodes.Clear();
-                    //TreeNode raiz = new TreeNode();
-                    //raiz.Text = cmbCategoria.SelectedItem.ToString();
+
                     int index = cmbCategoria.SelectedIndex;
                     string nombreCampo = "";
 
@@ -105,6 +104,7 @@ namespace OnBoardComputer
                 }
             }
         }
+
         private void arbol_AfterSelect(object sender, TreeViewEventArgs e)
         {
             if (arbol.SelectedNode.Text != null)
