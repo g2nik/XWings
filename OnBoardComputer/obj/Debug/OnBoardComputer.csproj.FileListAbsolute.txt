@@ -8,3 +8,13 @@ C:\Users\Snake\Documents\GitHub\XWings\OnBoardComputer\obj\Debug\OnBoardComputer
 C:\Users\Snake\Documents\GitHub\XWings\OnBoardComputer\obj\Debug\OnBoardComputer.csproj.CoreCompileInputs.cache
 C:\Users\Snake\Documents\GitHub\XWings\OnBoardComputer\obj\Debug\OnBoardComputer.exe
 C:\Users\Snake\Documents\GitHub\XWings\OnBoardComputer\obj\Debug\OnBoardComputer.pdb
+C:\Users\Mario\Desktop\Github\G2Team\XWings\OnBoardComputer\bin\Debug\OnBoardComputer.exe.config
+C:\Users\Mario\Desktop\Github\G2Team\XWings\OnBoardComputer\bin\Debug\OnBoardComputer.exe
+C:\Users\Mario\Desktop\Github\G2Team\XWings\OnBoardComputer\bin\Debug\OnBoardComputer.pdb
+C:\Users\Mario\Desktop\Github\G2Team\XWings\OnBoardComputer\obj\Debug\OnBoardComputer.csprojAssemblyReference.cache
+C:\Users\Mario\Desktop\Github\G2Team\XWings\OnBoardComputer\obj\Debug\OnBoardComputer.OnBoardComputer.resources
+C:\Users\Mario\Desktop\Github\G2Team\XWings\OnBoardComputer\obj\Debug\OnBoardComputer.Properties.Resources.resources
+C:\Users\Mario\Desktop\Github\G2Team\XWings\OnBoardComputer\obj\Debug\OnBoardComputer.csproj.GenerateResource.cache
+C:\Users\Mario\Desktop\Github\G2Team\XWings\OnBoardComputer\obj\Debug\OnBoardComputer.csproj.CoreCompileInputs.cache
+C:\Users\Mario\Desktop\Github\G2Team\XWings\OnBoardComputer\obj\Debug\OnBoardComputer.exe
+C:\Users\Mario\Desktop\Github\G2Team\XWings\OnBoardComputer\obj\Debug\OnBoardComputer.pdb
