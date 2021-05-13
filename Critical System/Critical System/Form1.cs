@@ -21,7 +21,8 @@ namespace Critical_System
         ProgressBar[] progressBars;
         List<string> libros = new List<string>();
         BibliotecaXWigns.HelperMethods hlp = new BibliotecaXWigns.HelperMethods();
-        Thread downloadBooks;
+        Thread downloadBooks,hilo1;
+        Thread[] hilos ;
 
         public Form1()
         {
@@ -31,34 +32,14 @@ namespace Critical_System
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            hilos = new Thread[] { downloadBooks,hilo1};
             downloadBooks = new Thread(getBooks);
             downloadBooks.Start();
         }
 
-        private bool networkConnection()
-        {
-            bool network = false;
-            System.Uri Url = new System.Uri("https://www.google.com/");
-
-            System.Net.WebRequest WebRequest;
-            WebRequest = System.Net.WebRequest.Create(Url);
-            System.Net.WebResponse objetoResp;
-
-            try
-            {
-                objetoResp = WebRequest.GetResponse();
-                network = true;
-                objetoResp.Close();
-            }
-            catch (Exception)
-            {
-                network = false;
-            }
-            return network;
-        }
-
         private void getBooks()
-        { bool network ;
+        {
+            bool network;
             changeDownloadingBooklbl("Downloading Books");
             resetProgressBar();
 
@@ -67,17 +48,16 @@ namespace Critical_System
                 network = networkConnection();
                 if (network)
                 {
-
                     Parallel.For(0, llibres.Length, (i, state) =>
                     {
-                        String direction = "";
+                        string text = "";
                         WebRequest request = WebRequest.Create(llibres[i]);
                         using (WebResponse response = request.GetResponse())
                         {
                             using (StreamReader stream = new StreamReader(response.GetResponseStream()))
                             {
-                                direction = stream.ReadToEnd();
-                                libros.Add(direction);
+                                text = stream.ReadToEnd();
+                                libros.Add(text);
                             }
                         }
                     });
@@ -91,56 +71,24 @@ namespace Critical_System
             }
             catch (Exception o)
             {
-                MessageBox.Show( o.Message, "Internal Error");
-            }
-        }
-
-        private void changeDownloadingBooklbl(string state)
-        {
-            if (InvokeRequired)
-            {
-                lbl_download.Invoke(new MethodInvoker(delegate ()
-                {
-                    lbl_download.Text =state;
-                }));
+                MessageBox.Show(o.Message, "Internal Error");
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (downloadBooks.IsAlive)
+            {
+                downloadBooks.Abort();
+            }
+
             for (int i = 0; i < progressBars.Length; i++)
             {
-                 progressBars[i].Value = 0;
+                progressBars[i].Value = 0;
             }
             resetProgressBar();
-                Thread hilo1 = new Thread(new ThreadStart(startProcess));
+            hilo1 = new Thread(new ThreadStart(startProcess));
             hilo1.Start();
-        }
-
-        private void resetProgressBar()
-        {
-            for (int i = 0; i < progressBars.Length; i++)
-            {
-                if (InvokeRequired)
-                {
-                    progressBars[i].Invoke(new MethodInvoker(delegate ()
-                    {
-                        progressBars[i].Value = 0;
-                    }));
-                }
-            }
-            blocButton();
-        }
-
-        private void blocButton()
-        {
-            if (InvokeRequired)
-            {
-                button1.Invoke(new MethodInvoker(delegate ()
-                {
-                    button1.Enabled = false;
-                }));
-            }
         }
 
         private void startProcess()
@@ -152,7 +100,6 @@ namespace Critical_System
                 contador++;
             }
         }
-
         private void dotChecks(string llibre, ProgressBar pgb)
         {
             string[] words = llibre.Split(' ');
@@ -175,7 +122,6 @@ namespace Critical_System
             {
                 Console.WriteLine(hlp.GetMostCommonWordsByLength(words, rnd.Next(4, 10), rnd.Next(5, 10)));
                 updateProgressbar(pgb);
-
             },
             () =>
             {
@@ -191,7 +137,7 @@ namespace Critical_System
             {
                 Console.WriteLine(hlp.GetLessCommonWords(words, rnd.Next(4, 10), rnd.Next(5, 10)));
                 updateProgressbar(pgb);
-            }, 
+            },
             () =>
             {
                 Console.WriteLine(hlp.GetLongestWord(words));
@@ -200,16 +146,42 @@ namespace Critical_System
             );
             enableButton();
         }
-         
-        private void enableButton()
+
+        private bool networkConnection()
         {
-            if (InvokeRequired)
+            System.Uri Url = new System.Uri("https://www.google.com/");
+            System.Net.WebRequest WebRequest;
+            System.Net.WebResponse objetoResp;
+            bool network = false;
+            WebRequest = System.Net.WebRequest.Create(Url);
+            
+            try
             {
-                button1.Invoke(new MethodInvoker(delegate ()
-                {
-                    button1.Enabled = true;
-                }));
+                objetoResp = WebRequest.GetResponse();
+                network = true;
+                objetoResp.Close();
             }
+            catch (Exception)
+            {
+                network = false;
+            }
+            return network;
+        }
+
+        #region Invoke
+        private void resetProgressBar()
+        {
+            for (int i = 0; i < progressBars.Length; i++)
+            {
+                if (InvokeRequired)
+                {
+                    progressBars[i].Invoke(new MethodInvoker(delegate ()
+                    {
+                        progressBars[i].Value = 0;
+                    }));
+                }
+            }
+            blocButton();
         }
 
         private void updateProgressbar(ProgressBar pgb)
@@ -221,6 +193,42 @@ namespace Critical_System
                     pgb.Value += 10;
                 }));
             }
-        }      
+        }
+
+        private void enableButton()
+        {
+            if (InvokeRequired)
+            {
+                button1.Invoke(new MethodInvoker(delegate ()
+                {
+                    button1.Enabled = true;
+                }));
+            }
+        }
+
+        private void blocButton()
+        {
+            if (InvokeRequired)
+            {
+                button1.Invoke(new MethodInvoker(delegate ()
+                {
+                    button1.Enabled = false;
+                }));
+            }
+        }
+
+     
+
+        private void changeDownloadingBooklbl(string state)
+        {
+            if (InvokeRequired)
+            {
+                lbl_download.Invoke(new MethodInvoker(delegate ()
+                {
+                    lbl_download.Text = state;
+                }));
+            }
+        }
+        #endregion
     }
 }

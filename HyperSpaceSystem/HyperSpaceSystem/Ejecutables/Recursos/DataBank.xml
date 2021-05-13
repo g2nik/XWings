@@ -122,6 +122,11 @@
         <selectedRoute>Rimma Trade Route</selectedRoute>
         <map>InnerRim.jpg</map>
       </defineRoute>
+      <defineRoute>
+        <OrDes>Kashyyyk-Kuat</OrDes>
+        <selectedRoute>Hydian Way</selectedRoute>
+        <map>Colonies.jpg</map>
+      </defineRoute>
     </definedRoutes>
   </hyperspaceRoutes>
   <filiations>

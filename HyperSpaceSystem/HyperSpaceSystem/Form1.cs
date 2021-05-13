@@ -387,7 +387,7 @@ namespace HyperSpaceSystem
 
         private void writeLbl(XmlNodeList selectedPlanetChilds, List<string> selectedPlanetData)
         {
-            setText()
+            setText();
 
             lbl_sector.Text = selectedPlanetData[1];
             lbl_filiation.Text = selectedPlanetData[2]; ;

@@ -149,7 +149,7 @@ namespace Critical_System
             // 
             this.lbl_download.AutoSize = true;
             this.lbl_download.ForeColor = System.Drawing.Color.PaleGreen;
-            this.lbl_download.Location = new System.Drawing.Point(195, 176);
+            this.lbl_download.Location = new System.Drawing.Point(84, 176);
             this.lbl_download.Name = "lbl_download";
             this.lbl_download.Size = new System.Drawing.Size(35, 13);
             this.lbl_download.TabIndex = 11;
